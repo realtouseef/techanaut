@@ -21,7 +21,6 @@
 
     .cat_article_link {
       @apply w-80;
-      @apply bg-white rounded-b-lg;
 
       .cat_feat_wrapper {
         @apply w-80;
@@ -39,7 +38,7 @@
           @apply text-sm text-gray-500;
         }
         span {
-          @apply text-xs font-bold tracking-wider text-blue-600;
+          @apply text-xs font-bold tracking-wider text-green-600;
         }
       }
     }
