@@ -89,18 +89,11 @@ const renderOptions = {
     [BLOCKS.EMBEDDED_ASSET]: (node) => {
       // render the EMBEDDED_ASSET as you need
       return (
-        <div className="SBP_img_asset_wrapper">
-          <img
-            src={`https:${node.data.target.fields.file.url}`}
-            alt={node.data.target.fields.title}
-            // height={node.data.target.fields.file.details.image.height}
-            // width={node.data.target.fields.file.details.image.width}
-            quality={100}
-            layout="fill"
-            // placeholder="blur"
-            // blurDataURL={`https:${node.data.target.fields.file.url}`}
-          />
-        </div>
+        <img
+          src={`https:${node.data.target.fields.file.url}`}
+          alt={node.data.target.fields.title}
+          className="SBP_img_asset_wrapper"
+        />
       );
     },
   },

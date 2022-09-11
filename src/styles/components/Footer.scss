@@ -1,4 +1,5 @@
 footer {
+  @apply max-w-screen-lg mx-auto;
   .footer_wrapper {
     @apply py-7 border-t;
     @apply my-6 mx-4 lg:mx-auto select-none;

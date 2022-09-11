@@ -1,5 +1,5 @@
 .SingleBlogPost {
-  @apply max-w-screen-lg mx-auto text-center;
+  @apply max-w-screen-lg mx-auto text-center mt-12;
 
   .sbp_amz {
     @apply max-w-screen-md mx-8 md:mx-auto my-10 text-left py-6 px-8 rounded-md text-sm bg-[#fafafa] text-[#8a8a8a];
@@ -13,7 +13,7 @@
     @apply max-w-screen-md mx-auto px-5 lg:px-0 py-5 lg:py-8;
 
     .SBP-category {
-      @apply text-sm text-base-secondary font-semibold tracking-wide uppercase;
+      @apply text-sm text-green-600 font-semibold tracking-wide uppercase;
     }
 
     .SBP-title {
@@ -74,7 +74,7 @@
       @apply py-3;
 
       a {
-        @apply px-4 py-3 bg-base-secondary/10 hover:bg-base-secondary/20 text-base-secondary font-bold tracking-wide;
+        @apply px-4 py-3 bg-green-50 hover:bg-green-100 text-green-700 font-bold tracking-wide no-underline;
       }
     }
 
@@ -83,7 +83,7 @@
     }
 
     a {
-      @apply text-base-secondary underline;
+      @apply text-green-600 underline;
     }
 
     ul {
@@ -113,7 +113,7 @@
     }
 
     .SBP_img_asset_wrapper {
-      @apply relative my-5 overflow-hidden aspect-video;
+      @apply w-full h-full mt-4 mb-7;
     }
   }
 }

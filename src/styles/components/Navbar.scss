@@ -21,7 +21,7 @@
         .items_a {
           @apply hidden md:inline-block;
           @apply py-2 px-3;
-          @apply font-bold text-base-secondary hover:text-base-secondary  hover:bg-base-secondary/10;
+          @apply font-semibold text-green-600 hover:bg-green-50;
 
           &:last-child {
             @apply mr-10;
@@ -68,7 +68,7 @@
         @apply text-xl;
 
         &:hover {
-          @apply text-base-secondary/60;
+          @apply text-green-700;
         }
         &:last-child {
           @apply border-b;
