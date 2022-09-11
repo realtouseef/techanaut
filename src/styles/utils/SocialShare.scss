@@ -1,0 +1,10 @@
+.main_social_share {
+  .social_share {
+    @apply space-y-1 space-x-2 xl:space-x-0;
+    @apply flex flex-row xl:flex-col items-center justify-center;
+    @apply text-gray-500 font-bold tracking-wide;
+    svg {
+      @apply hover:opacity-80;
+    }
+  }
+}

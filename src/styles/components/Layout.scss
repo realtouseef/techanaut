@@ -1,0 +1,10 @@
+.layout_main {
+  @apply max-w-screen-lg mx-auto;
+  @apply min-h-screen;
+  @apply flex flex-col;
+
+  .layout_children {
+    @apply mb-60;
+    @apply flex-grow;
+  }
+}

@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+body {
+  @apply bg-white;
+  @apply font-poppins;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+  @apply font-poppins font-extrabold text-base-dark;
+}
+
+.author_date {
+  @apply flex items-center justify-start;
+  @apply text-xs;
+  @apply text-base-dark/80;
+}
+
+.wrapper_svg {
+  @apply w-6 h-6;
+}

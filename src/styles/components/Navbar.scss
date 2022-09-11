@@ -1,0 +1,79 @@
+.navbar_main {
+  @apply h-16;
+  @apply py-4;
+
+  &_wrapper {
+    @apply flex items-center justify-between;
+    @apply max-w-4xl;
+    @apply lg:mx-auto mx-4;
+
+    .navbar_left {
+      @apply cursor-pointer;
+      .nav_logo {
+        @apply text-[26px];
+      }
+    }
+
+    .navbar_right_outer-wrapper {
+      @apply flex items-center justify-center;
+
+      .navbar_right {
+        .items_a {
+          @apply hidden md:inline-block;
+          @apply py-2 px-3;
+          @apply font-bold text-base-secondary hover:text-base-secondary  hover:bg-base-secondary/10;
+
+          &:last-child {
+            @apply mr-10;
+          }
+        }
+
+        button {
+          .wrapper_svg {
+            @apply w-6 h-6;
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav_bg_shadow {
+  @apply fixed inset-0 w-full h-full;
+  @apply bg-base-dark/40;
+}
+.nav_sidebar {
+  @apply fixed top-6 right-4;
+  @apply w-[360px] h-[calc(100vh-70px)];
+  @apply px-8;
+  @apply bg-base-light;
+  @apply rounded-lg drop-shadow-2xl;
+  @apply z-20 overflow-y-auto;
+
+  .sidebar_logo {
+    @apply flex items-center justify-between;
+    @apply h-9 my-6;
+  }
+
+  .sidebar_ul {
+    @apply w-full;
+    .sidebar_li {
+      @apply flex flex-col justify-center items-start;
+      @apply divide-y;
+
+      .sidebar_a {
+        @apply w-full;
+        @apply py-5;
+        @apply text-base-dark font-semibold;
+        @apply text-xl;
+
+        &:hover {
+          @apply text-base-secondary/60;
+        }
+        &:last-child {
+          @apply border-b;
+        }
+      }
+    }
+  }
+}

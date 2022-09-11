@@ -1,0 +1,119 @@
+.SingleBlogPost {
+  @apply max-w-screen-lg mx-auto text-center;
+
+  .sbp_amz {
+    @apply max-w-screen-md mx-8 md:mx-auto my-10 text-left py-6 px-8 rounded-md text-sm bg-[#fafafa] text-[#8a8a8a];
+  }
+
+  .SBP-featured__wrapper {
+    @apply relative z-0 max-w-screen-lg mx-auto overflow-hidden aspect-video;
+  }
+
+  .actual_content {
+    @apply max-w-screen-md mx-auto px-5 lg:px-0 py-5 lg:py-8;
+
+    .SBP-category {
+      @apply text-sm text-base-secondary font-semibold tracking-wide uppercase;
+    }
+
+    .SBP-title {
+      @apply mt-2 mb-3 text-3xl font-semibold tracking-tight text-center lg:leading-snug text-base-primary lg:text-4xl;
+    }
+
+    .sbp-author-date {
+      @apply flex flex-col items-center justify-center;
+
+      .sbp-author_section {
+        @apply flex items-center justify-center;
+
+        .sbp-author_image {
+          @apply relative w-10 h-10 mr-2;
+
+          img {
+            @apply rounded-full;
+          }
+        }
+        .sbp-author-date_wrapper {
+          @apply flex flex-col items-start justify-center;
+
+          .sbp-author-name {
+            @apply text-gray-800;
+          }
+
+          .sbp-date {
+            @apply text-gray-500 text-sm;
+          }
+        }
+      }
+    }
+
+    .SBP-content {
+      .SBP-content_wrapper {
+        @apply text-left;
+      }
+    }
+
+    // styling for distinguishing the headings
+
+    h1 {
+      @apply text-3xl lg:text-4xl my-4 font-semibold;
+    }
+    h2 {
+      @apply text-2xl lg:text-3xl font-bold my-4;
+    }
+    h3 {
+      @apply text-xl lg:text-2xl font-semibold my-4;
+    }
+    h4 {
+      @apply text-lg lg:text-xl my-4;
+    }
+    h5 {
+      @apply text-lg my-4;
+    }
+    h6 {
+      @apply py-3;
+
+      a {
+        @apply px-4 py-3 bg-base-secondary/10 hover:bg-base-secondary/20 text-base-secondary font-bold tracking-wide;
+      }
+    }
+
+    p {
+      @apply my-5 text-base-primary text-lg leading-relaxed;
+    }
+
+    a {
+      @apply text-base-secondary underline;
+    }
+
+    ul {
+      @apply list-outside list-disc;
+
+      li {
+        @apply flex items-center justify-start before:content-["⭐"] before:mr-5;
+
+        &:last-child {
+          @apply mb-8;
+        }
+
+        p {
+          @apply my-2 p-0;
+        }
+      }
+    }
+
+    blockquote {
+      @apply pl-6 pr-4;
+      @apply border-l-4 border-base-secondary;
+      @apply text-sm italic;
+
+      p {
+        @apply text-lg font-semibold;
+      }
+    }
+
+    .SBP_img_asset_wrapper {
+      @apply relative my-5 overflow-hidden aspect-video;
+    }
+  }
+}

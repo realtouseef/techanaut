@@ -1,0 +1,8 @@
+.article_layout {
+  @apply flex flex-col;
+  @apply min-h-screen;
+
+  .article_layout_children {
+    @apply flex-grow;
+  }
+}

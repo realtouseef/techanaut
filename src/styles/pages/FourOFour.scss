@@ -1,0 +1,15 @@
+.four_not-found {
+  @apply max-w-4xl mx-auto mt-10;
+  h1 {
+    @apply mb-6 text-4xl font-semibold;
+  }
+  p {
+    @apply text-xl mb-2 text-base-dark/80 font-semibold;
+  }
+
+  button {
+    @apply px-4 py-2 mt-4;
+    @apply bg-base-secondary/10 hover:bg-base-secondary/20;
+    @apply text-base-secondary font-semibold text-xl;
+  }
+}

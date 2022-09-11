@@ -1,0 +1,21 @@
+@import "./general.scss";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+// pages
+// @import "./pages/blogPost.scss";
+@import "./pages/updatedLayoutBlog.scss";
+@import "./pages/Pages.scss";
+@import "./pages/FourOFour.scss";
+
+// components
+@import "./components/Layout.scss";
+@import "./components/ArticleLayout.scss";
+@import "./components/OverallBlogs.scss";
+@import "./components/Navbar.scss";
+@import "./components/Footer.scss";
+@import "./components/Category.scss";
+
+// utils
+@import "./utils/SocialShare.scss";

@@ -1,0 +1,24 @@
+footer {
+  .footer_wrapper {
+    @apply py-7 border-t;
+    @apply my-6 mx-4 lg:mx-auto select-none;
+
+    .footer_left {
+      @apply flex flex-col items-center justify-center;
+
+      .footer_logo {
+        a {
+          @apply cursor-pointer;
+        }
+      }
+
+      .footer_para {
+        @apply max-w-screen-md mx-auto my-4;
+        @apply text-xs text-[#828282];
+      }
+      small {
+        @apply text-[#8a8a8a];
+      }
+    }
+  }
+}

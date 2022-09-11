@@ -1,0 +1,81 @@
+.blog-home {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6 place-items-center;
+  @apply max-w-4xl mx-auto my-8;
+
+  .blog-home_wrapper {
+    &:hover {
+      .inner_featured_img {
+        @apply scale-110 transition-transform duration-300 ease-in-out;
+      }
+
+      .content-below_h1 {
+        .below_h1_span {
+          @apply bg-gradient-to-r from-green-200 to-green-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_6px] group-hover:bg-[length:100%_10px];
+        }
+      }
+    }
+    &_inner {
+      @apply max-w-fit;
+      @apply cursor-pointer;
+
+      .inner-wrapper_inside {
+        @apply flex flex-col items-start justify-center;
+        @apply p-2;
+        @apply max-w-md;
+        @apply transition-shadow duration-150 ease-in;
+
+        .inner_featured_img {
+          @apply w-full relative;
+
+          img {
+            @apply rounded-lg transition-transform duration-200 ease-in;
+          }
+        }
+        .content-below-image {
+          @apply space-y-2;
+
+          .category_tag {
+            @apply text-sm font-semibold text-base-secondary tracking-wide uppercase;
+          }
+
+          .content-below_h1 {
+            @apply text-lg text-base-primary font-semibold;
+          }
+          .excerpt {
+            @apply text-sm text-base-dark/90;
+          }
+          .author_date {
+            @apply tracking-wide;
+
+            .author_wrapper_allblogs {
+              @apply flex items-center justify-center;
+
+              .author_image {
+                @apply flex items-center justify-center;
+
+                .author_image_wrapper {
+                  @apply relative h-6 w-6 mr-2;
+
+                  img {
+                    @apply rounded-full;
+                  }
+                  .author_name_abp {
+                    @apply mr-5;
+                  }
+                }
+              }
+            }
+          }
+          .blogs-stuff {
+            @apply flex items-center justify-between;
+            @apply text-xs;
+
+            .blog-home_author_date {
+              @apply ml-2;
+            }
+          }
+        }
+      }
+    }
+  }
+}
