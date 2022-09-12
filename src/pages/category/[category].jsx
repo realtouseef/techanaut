@@ -3,7 +3,6 @@ import Layout from "@/components/Layout";
 import safeJsonStringify from "safe-json-stringify";
 import Link from "next/link";
 import Image from "next/image";
-import SEO from "@/utils/SEO";
 import Head from "next/head";
 import { SiteData } from "@/utils/SiteData";
 
