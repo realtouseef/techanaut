@@ -1,0 +1,8 @@
+# *
+User-agent: *
+
+# Host
+Host: https://techanaut.com
+
+# Sitemaps
+Sitemap: https://techanaut.com/sitemap.xml

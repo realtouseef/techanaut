@@ -1,9 +1,9 @@
-import Head from "next/head";
 import dynamic from "next/dynamic";
 import Layout from "@/components/Layout";
 import { createClient } from "contentful";
 import safeJsonStringify from "safe-json-stringify";
 import { SiteData } from "@/utils/SiteData";
+import Head from "next/head";
 
 // dynamic imports
 const AllBlogPosts = dynamic(() => import("@/components/AllBlogPosts"));
@@ -20,7 +20,17 @@ export async function getStaticProps() {
 
   return {
     props: {
-      blogPosts: data,
+      // only return what you're using
+      // helps in decreasing the size
+      blogPosts: data.map(
+        ({
+          fields: { title, author, featuredImage, slug, category },
+          sys: { id, updatedAt },
+        }) => ({
+          fields: { title, author, featuredImage, slug, category },
+          sys: { id, updatedAt },
+        })
+      ),
     },
     revalidate: 1,
   };
@@ -49,6 +59,7 @@ const Home = ({ blogPosts }) => {
         <meta property="og:site_name" content={siteTitle} />
         <meta property="og:url" content={siteUrl} />
         <meta property="og:description" content={siteDescription} />
+        <meta property="description" content={siteDescription} />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={sitePlaceholerImage} />
