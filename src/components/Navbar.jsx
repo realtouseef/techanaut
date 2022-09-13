@@ -95,6 +95,7 @@ const Navbar = () => {
               </li>
             </ul>
             <button
+              aria-label="hamburger icon"
               type="button"
               onClick={() => {
                 setIsOpen(true);
@@ -120,6 +121,7 @@ const Navbar = () => {
             <p className="sidebar_logo">
               <Techanaut />
               <button
+                aria-label="close icon"
                 type="button"
                 onClick={() => {
                   setIsOpen(false);

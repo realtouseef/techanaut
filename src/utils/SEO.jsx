@@ -27,12 +27,13 @@ const ArticleSEO = ({
         content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
       />
       <meta property="og:title" content={articleTitle} />
-      <meta property="og:url" content={`${siteUrl}/${slug}`} />
+      <meta property="og:url" content={`${siteUrl}/blog/${slug}`} />
       <meta property="og:site_name" content={siteName} />
+      <meta property="description" content={excerpt} />
       <meta property="og:description" content={excerpt} />
       <meta property="og:locale" content="en_US" />
       <meta property="og:type" content="article" />
-      <link rel="canonical" href={`${siteUrl}/${slug}`} />
+      <link rel="canonical" href={`${siteUrl}/blog/${slug}`} />
       <meta property="og:image" content={`https:${image}`} />
       <meta property="og:image:width" content={imageWidth} />
       <meta property="og:image:height" content={imageHeight} />
