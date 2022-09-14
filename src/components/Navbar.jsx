@@ -12,7 +12,7 @@ const Cross = dynamic(() => import("public/Xmark.svg"));
 const Bars = dynamic(() => import("public/Bars.svg"));
 
 const Navbar = () => {
-  const [singleCategory, setSingleCategory] = useState(null);
+  // const [singleCategory, setSingleCategory] = useState(null);
   const [allCategories, setAllCategories] = useState(null);
   const [renderPages, setRenderPages] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -22,24 +22,24 @@ const Navbar = () => {
     accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
   });
 
-  useEffect(() => {
-    // categories are limited to 3
-    (async () => {
-      const res = await fetch(process.env.NEXT_PUBLIC_CONTENTFUL_GRAPHQL_URL, {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          query: categoryNameQuery,
-        }),
-      });
+  // useEffect(() => {
+  // categories are limited to 3
+  //   (async () => {
+  //     const res = await fetch(process.env.NEXT_PUBLIC_CONTENTFUL_GRAPHQL_URL, {
+  //       method: "POST",
+  //       headers: {
+  //         Authorization: `Bearer ${process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN}`,
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({
+  //         query: categoryNameQuery,
+  //       }),
+  //     });
 
-      const { data } = await res.json();
-      setSingleCategory(data.categoryCollection?.items);
-    })();
-  }, []);
+  //     const { data } = await res.json();
+  //     setSingleCategory(data.categoryCollection?.items);
+  //   })();
+  // }, []);
 
   useEffect(() => {
     // all the categories are fetched
@@ -69,23 +69,34 @@ const Navbar = () => {
     })();
   }, []);
 
+  // doing this to lower the response time
+  const localCategory = [
+    { id: 1, categoryName: "How To", slug: "how-to" },
+    { id: 2, categoryName: "Informational", slug: "informational" },
+    { id: 3, categoryName: "Buying Guides", slug: "buying-guides" },
+  ];
+
   return (
     <>
       <div className="navbar_main">
         <div className="navbar_main_wrapper">
           <nav className="navbar_left">
-            <Link href="/" className=" nav_logo">
+            <Link
+              aria-label="go back to home page"
+              href="/"
+              className="nav_logo"
+            >
               <Techanaut />
             </Link>
           </nav>
           <div className="navbar_right_outer-wrapper">
             <ul className="navbar_right">
               <li className="items_li">
-                {singleCategory?.map(({ categoryName, slug, sys }) => {
+                {localCategory?.map(({ categoryName, slug, id }) => {
                   return (
                     <Link
                       href={`/category/${slug}`}
-                      key={sys.id}
+                      key={id}
                       className="items_link"
                     >
                       <a className="items_a">{categoryName}</a>
@@ -139,6 +150,7 @@ const Navbar = () => {
                     <Link
                       href={`/category/${slug}`}
                       key={sys.id}
+                      prefetch="false"
                       className="sidebar_link"
                     >
                       <a className="sidebar_a">{categoryName}</a>

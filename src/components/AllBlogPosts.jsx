@@ -16,7 +16,7 @@ const AllBlogPosts = ({ blogPosts }) => {
                   <div className="inner-wrapper_inside">
                     <div className="inner_featured_img">
                       <Image
-                        src={`https:${fields?.featuredImage?.fields?.file?.url}`}
+                        src={`https:${fields?.featuredImage?.fields?.file?.url}?w=700&h=350&q=40&fm=webp`}
                         alt={`${fields?.title}'s featured Image on Techanaut`}
                         width={
                           fields?.featuredImage?.fields?.file?.details?.image

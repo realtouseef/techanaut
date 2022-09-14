@@ -5,7 +5,7 @@
   .blog-home_wrapper {
     &:hover {
       .inner_featured_img {
-        @apply lg:scale-110 transition-transform duration-300 ease-in-out;
+        @apply lg:scale-105 transition-transform duration-300 ease-in-out;
       }
 
       .content-below_h1 {
@@ -25,7 +25,7 @@
         @apply transition-shadow duration-150 ease-in;
 
         .inner_featured_img {
-          @apply w-full relative;
+          @apply relative;
 
           img {
             @apply rounded-lg transition-transform duration-200 ease-in;

@@ -88,12 +88,13 @@ const renderOptions = {
 
     [BLOCKS.EMBEDDED_ASSET]: (node) => {
       // render the EMBEDDED_ASSET as you need
+      // remove the contentType `image/jpg`
+      // and take the second part with slice()
       return (
         <div className="SBP_img_asset_wrapper">
           <Image
-            src={`https:${node.data.target.fields.file.url}`}
+            src={`https:${node.data.target.fields.file.url}?w=900&h=500&q=40&fl=progressive`}
             alt={node.data.target.fields.title}
-            quality={100}
             layout="fill"
             placeholder="blur"
             blurDataURL={`https:${node.data.target.fields.file.url}`}
@@ -152,13 +153,12 @@ const PerPosts = ({ article }) => {
             <span className="sbp-author_section">
               <div className="sbp-author_image">
                 <Image
-                  src={`https:${article.fields?.author[0]?.fields?.picture?.fields?.file?.url}`}
+                  src={`https:${article.fields?.author[0]?.fields?.picture?.fields?.file?.url}?w=500&h=200&q=40&fm=jpg&fl=progressive`}
                   alt={`${article.fields?.author[0]?.fields?.name}'s profile picture on ${siteTitle}`}
                   placeholder="blur"
                   blurDataURL={`https:${article.fields?.author[0]?.fields?.picture?.fields?.file?.url}`}
                   layout="fill"
                   objectFit="cover"
-                  quality={100}
                 />
               </div>
               <div className="sbp-author-date_wrapper">
@@ -176,13 +176,12 @@ const PerPosts = ({ article }) => {
 
         <div className="SBP-featured__wrapper">
           <Image
-            src={`https:${article.fields?.featuredImage?.fields?.file?.url}`}
+            src={`https:${article.fields?.featuredImage?.fields?.file?.url}?w=900&h=500&q=20&fm=jpg&fl=progressive`}
             alt={`${article.fields?.title}'s featured image on Techanaut`}
             placeholder="blur"
             blurDataURL={`https:${article.fields?.featuredImage?.fields?.file?.url}`}
             layout="fill"
             objectFit="cover"
-            quality={100}
             loading="eager"
           />
         </div>

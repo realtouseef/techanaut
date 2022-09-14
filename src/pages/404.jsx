@@ -14,8 +14,10 @@ const FourOFour = () => {
           Please go to homepage and check our content curated by our
           professionals.
         </p>
-        <button>
-          <Link href="/">Go to MainPage</Link>
+        <button aria-label="Go back to Main Page">
+          <Link aria-label="go back to home page" href="/">
+            Go to Main Page
+          </Link>
         </button>
       </main>
     </Layout>

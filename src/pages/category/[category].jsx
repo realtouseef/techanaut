@@ -34,7 +34,9 @@ export async function getStaticProps({ params }) {
   const data = JSON.parse(stringifiedData);
 
   return {
-    props: { category: data },
+    props: {
+      category: data,
+    },
     revalidate: 1,
   };
 }
@@ -84,7 +86,7 @@ const Category = ({ category }) => {
                     <a className="cat_article_link">
                       <div className="cat_feat_wrapper">
                         <Image
-                          src={`https:${item.fields?.featuredImage?.fields?.file?.url}`}
+                          src={`https:${item.fields?.featuredImage?.fields?.file?.url}?q=20&fm=jpg&fl=progressive`}
                           alt={`${item.fields?.title}'s featured Image`}
                           height={
                             item.fields?.featuredImage?.fields?.file?.details

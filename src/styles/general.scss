@@ -1,9 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
-
 body {
   @apply bg-white;
-  @apply font-poppins;
+  @apply font-sans;
 }
 
 h1,
@@ -16,7 +13,7 @@ h5,
 .h3,
 .h4,
 .h5 {
-  @apply font-poppins font-extrabold text-base-dark;
+  @apply font-extrabold text-base-dark;
 }
 
 .author_date {

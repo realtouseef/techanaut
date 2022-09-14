@@ -46,32 +46,34 @@ const Home = ({ blogPosts }) => {
     sitePlaceholerImage,
   } = SiteData;
   return (
-    <Layout>
-      <Head>
-        <meta charSet="utf-8" />
-        <title>{siteTitle + " | " + siteMoto}</title>
-        <link rel="canonical" href={siteUrl} />
-        <meta
-          property="viewport"
-          content="width=device-width, initial-scale=1"
-        />
-        <meta property="og:title" content={siteTitle} />
-        <meta property="og:site_name" content={siteTitle} />
-        <meta property="og:url" content={siteUrl} />
-        <meta property="og:description" content={siteDescription} />
-        <meta property="description" content={siteDescription} />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content={sitePlaceholerImage} />
-        <meta property="og:image:width" content="58" />
-        <meta property="og:image:height" content="58" />
-        <meta property="og:image:type" content="image/jpg" />
-        <meta property="keywords" content={siteKeywords} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content={`@${siteTitle}`} />
-      </Head>
-      <AllBlogPosts blogPosts={blogPosts} />
-    </Layout>
+    <>
+      <Layout>
+        <Head>
+          <meta charSet="utf-8" />
+          <title>{siteTitle + " | " + siteMoto}</title>
+          <link rel="canonical" href={siteUrl} />
+          <meta
+            property="viewport"
+            content="width=device-width, initial-scale=1"
+          />
+          <meta property="og:title" content={siteTitle} />
+          <meta property="og:site_name" content={siteTitle} />
+          <meta property="og:url" content={siteUrl} />
+          <meta property="og:description" content={siteDescription} />
+          <meta property="description" content={siteDescription} />
+          <meta property="og:locale" content="en_US" />
+          <meta property="og:type" content="website" />
+          <meta property="og:image" content={sitePlaceholerImage} />
+          <meta property="og:image:width" content="58" />
+          <meta property="og:image:height" content="58" />
+          <meta property="og:image:type" content="image/jpg" />
+          <meta property="keywords" content={siteKeywords} />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content={`@${siteTitle}`} />
+        </Head>
+        <AllBlogPosts blogPosts={blogPosts} />
+      </Layout>
+    </>
   );
 };
 
