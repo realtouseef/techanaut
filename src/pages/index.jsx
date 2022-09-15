@@ -43,7 +43,7 @@ const Home = ({ blogPosts }) => {
     siteDescription,
     siteKeywords,
     siteUrl,
-    siteBgImage,
+    siteImage,
   } = SiteData;
   return (
     <>
@@ -63,7 +63,7 @@ const Home = ({ blogPosts }) => {
           <meta property="description" content={siteDescription} />
           <meta property="og:locale" content="en_US" />
           <meta property="og:type" content="website" />
-          <meta property="og:image" content={siteBgImage} />
+          <meta property="og:image" content={siteImage} />
           <meta property="og:image:width" content="500" />
           <meta property="og:image:height" content="250" />
           <meta property="og:image:type" content="image/jpg" />
