@@ -37,7 +37,7 @@
           @apply flex flex-col items-start justify-center;
 
           .sbp-author-name {
-            @apply text-gray-800;
+            @apply text-gray-800 font-semibold;
           }
 
           .sbp-date {

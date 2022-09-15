@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import dayjs from "dayjs";
@@ -48,7 +48,12 @@ const renderOptions = {
   renderNode: {
     [INLINES.HYPERLINK]: (node, children) => {
       return (
-        <a target="_blank" rel="noopener noreferrer" href={node.data.uri}>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={node.data.uri}
+          aria-label={node.data.uri}
+        >
           {children}
         </a>
       );
@@ -61,6 +66,7 @@ const renderOptions = {
             href={node.data.target.fields.slug}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={node.data.target.fields.title}
           >
             {node.data.target.fields.title}
           </a>
@@ -90,6 +96,7 @@ const renderOptions = {
       // render the EMBEDDED_ASSET as you need
       // remove the contentType `image/jpg`
       // and take the second part with slice()
+      console.log(node);
       return (
         <div className="SBP_img_asset_wrapper">
           <Image
@@ -106,24 +113,24 @@ const renderOptions = {
 };
 
 const PerPosts = ({ article }) => {
-  const [isBuyingGuide, setIsBuyingGuide] = useState(false);
+  // const [isBuyingGuide, setIsBuyingGuide] = useState(false);
   const { siteTitle, siteUrl, siteAffiliateDisclosure } = SiteData;
+  // const buyingGuideCategory = article?.fields?.category?.fields?.categoryName;
 
-  const buyingGuideCategory = article?.fields?.category?.fields?.categoryName;
-
-  useEffect(() => {
-    (() => {
-      if (Object.values(buyingGuideCategory).join("") === "Buying Guide") {
-        setIsBuyingGuide(true);
-      }
-    })();
-  }, [buyingGuideCategory]);
+  // useEffect(() => {
+  //   (() => {
+  //     if (Object.values(buyingGuideCategory).join("") === "Buying Guide") {
+  //       setIsBuyingGuide(true);
+  //     }
+  //   })();
+  // }, [buyingGuideCategory]);
 
   return (
     <ArticleLayout>
       <SEO
         articleTitle={article.fields?.title}
         title={article.fields?.title}
+        description={article.fields?.excerpt}
         slug={article.fields?.slug}
         siteName={siteTitle}
         createdAt={article.sys?.createdAt}
@@ -153,12 +160,12 @@ const PerPosts = ({ article }) => {
             <span className="sbp-author_section">
               <div className="sbp-author_image">
                 <Image
-                  src={`https:${article.fields?.author[0]?.fields?.picture?.fields?.file?.url}?w=500&h=200&q=40&fm=jpg&fl=progressive`}
+                  src={`https:${article.fields?.author[0]?.fields?.picture?.fields?.file?.url}?w=400&h=200&q=20&fm=webp`}
                   alt={`${article.fields?.author[0]?.fields?.name}'s profile picture on ${siteTitle}`}
-                  placeholder="blur"
-                  blurDataURL={`https:${article.fields?.author[0]?.fields?.picture?.fields?.file?.url}`}
                   layout="fill"
                   objectFit="cover"
+                  placeholder="blur"
+                  blurDataURL={`https:${article.fields?.author[0]?.fields?.picture?.fields?.file?.url}`}
                 />
               </div>
               <div className="sbp-author-date_wrapper">

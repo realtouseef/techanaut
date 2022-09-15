@@ -7,6 +7,7 @@ const ArticleSEO = ({
   slug,
   siteName,
   excerpt,
+  description,
   image = Favicon,
   imageWidth,
   imageHeight,

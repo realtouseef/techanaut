@@ -150,7 +150,7 @@ const Navbar = () => {
                     <Link
                       href={`/category/${slug}`}
                       key={sys.id}
-                      prefetch="false"
+                      prefetch={false}
                       className="sidebar_link"
                     >
                       <a className="sidebar_a">{categoryName}</a>

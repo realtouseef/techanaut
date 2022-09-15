@@ -54,10 +54,10 @@
                 @apply flex items-center justify-center;
 
                 .author_image_wrapper {
-                  @apply relative h-6 w-6 mr-2;
+                  @apply relative w-8 h-8 mr-2;
 
                   img {
-                    @apply rounded-full;
+                    @apply rounded-full bg-cover bg-center;
                   }
                   .author_name_abp {
                     @apply mr-5;
