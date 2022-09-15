@@ -10,5 +10,5 @@ export const SiteData = {
     "Techanaut is determined to provide you the best and unbiased reviews about games and gaming related hardware stuff.",
   siteAffiliateDisclosure:
     "Techanaut is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.",
-  siteImage: "/public/techanaut-bg.jpg",
+  siteImage: "/techanaut-bg.jpg",
 };
