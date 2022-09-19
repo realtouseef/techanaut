@@ -8,9 +8,7 @@ Amazon Affiliate site built w/ NextJS, Contentful, Tailwind CSS, and Sass.
 
 ## TODOs
 
-- [x] 404 page needs to have paddings on the `x-axis`
-
-- [ ] if `cons` comes show 💔 and for `pros` show ⭐
+- [ ] Create a scraper that goes through the amazon products that are listed on my site and see if there's a discount going on, if yes, show the discounted price
 
 - [ ] Print 2 headings of latest articles under the article
 
