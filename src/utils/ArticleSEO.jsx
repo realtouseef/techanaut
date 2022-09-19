@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Favicon from "../../public/t-placeholder.jpg";
 import { SiteData } from "./SiteData";
 
 const ArticleSEO = ({
@@ -8,7 +7,7 @@ const ArticleSEO = ({
   siteName,
   excerpt,
   description,
-  image = Favicon,
+  image,
   imageWidth,
   imageHeight,
   imageType,

@@ -2,7 +2,7 @@ import Layout from "@/components/Layout";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { createClient } from "contentful";
 import safeJsonStringify from "safe-json-stringify";
-import SEO from "@/utils/SEO";
+import ArticleSEO from "@/utils/ArticleSEO";
 
 const client = createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -40,7 +40,7 @@ export async function getStaticProps({ params }) {
 const PageSlug = ({ pages }) => {
   return (
     <Layout>
-      <SEO
+      <ArticleSEO
         articleTitle={pages.fields?.title}
         title={pages.fields?.title}
         slug={pages.fields?.slug}

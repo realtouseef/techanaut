@@ -39,7 +39,7 @@
           }
 
           .content-below_h1 {
-            @apply text-lg text-base-primary font-semibold;
+            @apply text-lg md:text-xl text-base-primary font-semibold;
           }
           .excerpt {
             @apply text-sm text-base-dark/90;

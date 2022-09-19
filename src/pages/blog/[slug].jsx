@@ -7,7 +7,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import safeJsonStringify from "safe-json-stringify";
 import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 import { SiteData } from "@/utils/SiteData";
-import SEO from "@/utils/SEO";
+import ArticleSEO from "@/utils/ArticleSEO";
 
 // dynamic imports
 const ArticleLayout = dynamic(() => import("@/components/ArticleLayout"));
@@ -127,7 +127,7 @@ const PerPosts = ({ article }) => {
 
   return (
     <ArticleLayout>
-      <SEO
+      <ArticleSEO
         articleTitle={article.fields?.title}
         title={article.fields?.title}
         description={article.fields?.excerpt}
@@ -183,7 +183,7 @@ const PerPosts = ({ article }) => {
 
         <div className="SBP-featured__wrapper">
           <Image
-            src={`https:${article.fields?.featuredImage?.fields?.file?.url}?w=900&h=500&q=20&fm=jpg&fl=progressive`}
+            src={`https:${article.fields?.featuredImage?.fields?.file?.url}?w=900&h=500&q=50&fm=jpg&fl=progressive`}
             alt={`${article.fields?.title}'s featured image on Techanaut`}
             placeholder="blur"
             blurDataURL={`https:${article.fields?.featuredImage?.fields?.file?.url}`}
