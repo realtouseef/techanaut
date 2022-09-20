@@ -1,9 +1,9 @@
 # *
 User-agent: *
+Allow: /
 
 # Host
-Host: https://www.techanaut.com
+Host: https://techanaut.com
 
 # Sitemaps
-Sitemap: https://www.techanaut.com/sitemap.xml
-Sitemap: https://www.techanaut.com/sitemap-0.xml
+Sitemap: https://techanaut.com/sitemap.xml
