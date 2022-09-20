@@ -9,6 +9,7 @@ if (process.env.ENVIRONMENT !== "production") {
 module.exports = {
   siteUrl: process.env.URL,
   generateRobotsTxt: true,
+  generateIndexSitemap: false,
   robotsTxtOptions: {
     policies: [policy],
   },
