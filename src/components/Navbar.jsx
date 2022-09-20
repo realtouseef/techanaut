@@ -7,9 +7,9 @@ import {
 import { createClient } from "contentful";
 import dynamic from "next/dynamic";
 
-const Techanaut = dynamic(() => import("public/techanaut.svg"));
-const Cross = dynamic(() => import("public/Xmark.svg"));
-const Bars = dynamic(() => import("public/Bars.svg"));
+const Techanaut = dynamic(() => import("public/images/techanaut.svg"));
+const Cross = dynamic(() => import("public/images/Xmark.svg"));
+const Bars = dynamic(() => import("public/images/Bars.svg"));
 
 const Navbar = () => {
   // const [singleCategory, setSingleCategory] = useState(null);

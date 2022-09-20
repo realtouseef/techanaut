@@ -2,7 +2,7 @@ import Link from "next/link";
 import { SiteData } from "@/utils/SiteData";
 import dynamic from "next/dynamic";
 
-const Techanaut = dynamic(() => import("public/techanaut.svg"));
+const Techanaut = dynamic(() => import("public/images/techanaut.svg"));
 
 const Footer = () => {
   const { siteTitle, siteAffiliateDisclosure } = SiteData;
