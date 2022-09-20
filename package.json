@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "preview": "vite preview",
-    "postbuild": "next-sitemap"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.12.1",
