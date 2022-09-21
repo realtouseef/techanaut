@@ -13,11 +13,11 @@
     @apply max-w-screen-md mx-auto px-5 lg:px-0 py-5 lg:py-8;
 
     .SBP-category {
-      @apply text-sm text-green-600 font-semibold tracking-wide uppercase;
+      @apply text-sm text-green-600 font-bold tracking-wide uppercase;
     }
 
     .SBP-title {
-      @apply mt-2 mb-3 text-3xl font-semibold tracking-tight text-center lg:leading-snug text-base-primary lg:text-4xl;
+      @apply mt-2 mb-3 text-3xl font-bold tracking-tight text-center lg:leading-snug bg-gradient-to-r from-fuchsia-600 via-pink-400 to-purple-600 bg-clip-text text-transparent lg:text-4xl;
     }
 
     .sbp-author-date {
@@ -56,13 +56,13 @@
     // styling for distinguishing the headings
 
     h1 {
-      @apply text-3xl lg:text-4xl my-4 font-semibold;
+      @apply text-3xl lg:text-4xl my-4 font-extrabold;
     }
     h2 {
-      @apply text-2xl lg:text-3xl font-bold my-4;
+      @apply text-2xl lg:text-3xl font-extrabold my-4 bg-gradient-to-r from-purple-600 via-pink-400 to-fuchsia-600 bg-clip-text text-transparent;
     }
     h3 {
-      @apply text-xl lg:text-2xl font-semibold my-4;
+      @apply text-xl lg:text-[26px] font-extrabold my-4;
     }
     h4 {
       @apply text-lg lg:text-xl my-4;
@@ -71,15 +71,24 @@
       @apply text-lg my-4;
     }
     h6 {
-      @apply py-3 mt-5 mb-10;
+      @apply flex flex-col space-y-5 w-max py-3 mt-5 mb-10 text-sm sm:text-lg;
 
       a {
-        @apply px-4 py-3 bg-green-50 hover:bg-green-100 text-green-700 font-bold tracking-wide no-underline;
+        @apply px-4 py-3 bg-green-50 hover:bg-green-100 text-green-700 font-bold sm:tracking-wide no-underline;
       }
     }
 
+    b {
+      @apply font-extrabold;
+    }
     p {
-      @apply my-5 text-base-primary text-lg leading-relaxed;
+      @apply my-5 text-gray-800 text-lg leading-relaxed tracking-wide;
+
+      a {
+        u {
+          @apply font-extrabold;
+        }
+      }
     }
 
     a {

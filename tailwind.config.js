@@ -12,6 +12,9 @@ module.exports = {
         "base-dark": "#1f2633",
         "base-light": "#ffffff",
       },
+      fontFamily: {
+        montserrat: "Montserrat",
+      },
     },
   },
   plugins: [],

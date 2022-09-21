@@ -1,6 +1,5 @@
 body {
-  @apply bg-white;
-  @apply font-sans;
+  @apply bg-white font-montserrat;
 }
 
 h1,
@@ -13,7 +12,7 @@ h5,
 .h3,
 .h4,
 .h5 {
-  @apply font-extrabold text-base-dark;
+  @apply font-bold text-base-dark;
 }
 
 .author_date {
