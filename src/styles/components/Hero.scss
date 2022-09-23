@@ -1,0 +1,22 @@
+.hero {
+  @apply bg-primary_bg h-max pb-20;
+
+  .hero_wrapper {
+    @apply container_12 mx-auto;
+  }
+
+  .hero_text_wrapper {
+    @apply max-w-[500px] mx-auto pt-8 px-4 md:px-0 text-btn_text_hover text-center;
+
+    .hero_article_category {
+      @apply text-base text-btn_text_hover font-bold tracking-wide uppercase;
+    }
+
+    .hero_h1 {
+      @apply text-[30px] sm:text-[50px] font-ahrefs_display;
+    }
+    .hero_para {
+      @apply text-[18px] mt-4 text-btn_text_hover;
+    }
+  }
+}

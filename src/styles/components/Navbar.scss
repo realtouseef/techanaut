@@ -1,5 +1,5 @@
 .navbar_main {
-  @apply h-16;
+  @apply h-16 bg-primary_bg;
   @apply py-4;
 
   &_wrapper {
@@ -20,7 +20,7 @@
       .navbar_right {
         .items_a {
           @apply hidden md:inline-block;
-          @apply py-2 px-3 text-btn_text hover:text-text_hover;
+          @apply py-2 px-3 text-nav_btns hover:text-nav_btns_hover;
           @apply text-[20px] leading-[24px];
 
           &:last-child {
@@ -44,8 +44,8 @@
 .nav_sidebar {
   @apply fixed top-6 right-4;
   @apply w-[360px] h-[calc(100vh-150px)];
-  @apply px-8 bg-white;
-  @apply rounded-lg drop-shadow-2xl border-2;
+  @apply px-8 bg-primary_bg;
+  @apply rounded-lg shadow-2xl;
   @apply z-20 overflow-y-auto;
 
   .sidebar_logo {
@@ -57,18 +57,14 @@
     @apply w-full;
     .sidebar_li {
       @apply flex flex-col justify-center items-start;
-      @apply divide-y;
 
       .sidebar_a {
         @apply w-full;
         @apply py-5;
-        @apply text-[20px] leading-[24px] text-btn_text;
+        @apply text-[20px] leading-[24px] text-nav_btns;
 
         &:hover {
-          @apply text-text_hover;
-        }
-        &:last-child {
-          @apply border-b;
+          @apply text-nav_btns_hover;
         }
       }
     }

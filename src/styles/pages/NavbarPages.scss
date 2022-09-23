@@ -47,4 +47,13 @@
       }
     }
   }
+
+  blockquote {
+    @apply pl-6 pr-4;
+    @apply border-l-4 border-primary_bg text-primary_text italic;
+
+    p {
+      @apply text-xl;
+    }
+  }
 }

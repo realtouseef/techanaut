@@ -29,26 +29,30 @@ Actual article content -- 650px (255px x-padding)
 Table of content -- 240px
 author box -- 193px
 
-## TODOs
+## Priority TODOs
 
-- [ ] Copy ahrefs/blog design
-- [ ] Write copy for about, gaming laptop, peripherals, 
-
-- [x] fix the sitemap and robots.txt issue -- cannot be indexed cos of these.
-- [x] GSC is crying about `cannot reach robots.txt`
-
-- [x] fix the main page image when shared on fb
-
-- [ ] add `rel=sponsor` to the `anchor tag` inside `h6` aka. view price button
-
-- [ ] Create a scraper that goes through the amazon products that are listed on my site and see if there's a discount going on, if yes, show the discounted price
-
-- [ ] Print 2 headings of latest articles under the article
-
-  - both of the articles should be from the category the user is on.
-
-- [x] The image that shows up when you share the site on facebook/messenger is not working.
+- [ ] create another favicon with ahref style.
 
 - [ ] Add table of content
 
+- [ ] Print 2 headings of latest articles under the article
+  - both of the articles should be from the category the user is on.
+
+## TODOs
+
+- [ ] Create a scraper that goes through the amazon products that are listed on my site and see if there's a discount going on, if yes, show the discounted price
+
 - [ ] Pagination
+
+## Completed TODOs
+
+- [x] Write copy for about, gaming laptop, peripherals,
+- [x] Copy ahrefs/blog design
+- [x] fix the sitemap and robots.txt issue -- cannot be indexed cos of these.
+- [x] GSC is crying about `cannot reach robots.txt`
+- [x] fix the main page image when shared on fb
+- [x] The image that shows up when you share the site on facebook/messenger is not working.
+
+## Can't be complete
+
+- [ ] add `rel=sponsor` to the `anchor tag` inside `h6` aka. view price button (returns every link of the post -- cant put `rel-sponsor` to linking to other articles)

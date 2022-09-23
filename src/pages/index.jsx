@@ -4,6 +4,7 @@ import { createClient } from "contentful";
 import safeJsonStringify from "safe-json-stringify";
 import { SiteData } from "@/utils/SiteData";
 import Head from "next/head";
+import Hero from "@/components/Hero";
 
 // dynamic imports
 const AllBlogPosts = dynamic(() => import("@/components/AllBlogPosts"));
@@ -75,6 +76,10 @@ const Home = ({ blogPosts }) => {
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content={`@${siteTitle}`} />
         </Head>
+        <Hero
+          heroTitle={`the ${siteTitle} Blog`}
+          heroDescription="Expand your knowledge of the tech and gaming world with detailed reviews, step-by-step guides, and informational content."
+        />
         <AllBlogPosts blogPosts={blogPosts} />
       </Layout>
     </>

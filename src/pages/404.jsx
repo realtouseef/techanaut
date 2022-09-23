@@ -11,12 +11,11 @@ const FourOFour = () => {
           broken or doesn't exist.`}
         </p>
         <p>
-          Please go to homepage and check our content curated by our
-          professionals.
+          Please double check if the URL is correct or you can pick another article to read, written by our experts.
         </p>
         <button aria-label="Go back to Main Page">
           <Link aria-label="go back to home page" href="/">
-            Go to Main Page
+            Read other Articles
           </Link>
         </button>
       </main>

@@ -3,6 +3,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { createClient } from "contentful";
 import safeJsonStringify from "safe-json-stringify";
 import ArticleSEO from "@/utils/ArticleSEO";
+import Hero from "@/components/Hero";
 
 const client = createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -46,8 +47,8 @@ const PageSlug = ({ pages }) => {
         slug={pages.fields?.slug}
         keywords={pages.fields?.metadata?.tags}
       />
+      <Hero heroTitle={pages.fields?.title} />
       <main className="pages_wrapper">
-        <h1>{pages.fields?.title}</h1>
         <div>{documentToReactComponents(pages.fields?.content)}</div>
       </main>
     </Layout>

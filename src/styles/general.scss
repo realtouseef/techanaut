@@ -1,9 +1,9 @@
 body {
-  @apply bg-white font-ahrefs_regular;
+  @apply font-ahrefs_regular;
 }
 
 p {
-  @apply font-ibm_reg text-[#333];
+  @apply font-ibm_reg text-primary_text;
 }
 
 .author_date {
@@ -16,7 +16,7 @@ p {
 }
 
 .container_12 {
-  @apply max-w-[1200px];
+  @apply max-w-[1200px] px-4;
 }
 
 .article_container {

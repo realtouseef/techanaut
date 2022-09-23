@@ -1,0 +1,32 @@
+.article_hero {
+  @apply bg-primary_bg h-max;
+
+  .article_hero_wrapper {
+    @apply container_12 mx-auto pb-20;
+
+    &_text {
+      @apply max-w-[650px] mx-auto pt-8 text-btn_text_hover text-center;
+      .article_hero_featuredImage {
+      }
+
+      .article_hero_category {
+        @apply mb-4 text-base font-ahrefs_bold text-btn_text_hover font-bold tracking-wider uppercase;
+      }
+
+      .article_hero_h1 {
+        @apply text-[30px] sm:text-[50px] leading-none font-ahrefs_bold;
+      }
+
+      .article_hero_author_wrapper {
+        @apply flex items-center justify-center mt-8 text-lg;
+
+        .article_hero_author_name {
+          @apply text-btn_text_hover underline underline-offset-4;
+        }
+        .article_hero_date {
+          @apply font-ibm_reg before:content-['⁕'] before:mr-3 ml-3;
+        }
+      }
+    }
+  }
+}

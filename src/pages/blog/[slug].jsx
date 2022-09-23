@@ -1,14 +1,13 @@
 // import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import dayjs from "dayjs";
 import { createClient } from "contentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import safeJsonStringify from "safe-json-stringify";
 import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 import { SiteData } from "@/utils/SiteData";
 import ArticleSEO from "@/utils/ArticleSEO";
-import Link from "next/link";
+import ArticleHero from "@/components/ArticleHero";
 
 // dynamic imports
 const ArticleLayout = dynamic(() => import("@/components/ArticleLayout"));
@@ -100,7 +99,7 @@ const renderOptions = {
       return (
         <div className="SBP_img_asset_wrapper">
           <Image
-            src={`https:${node.data.target.fields.file.url}?w=800&h=400&q=30&fl=progressive`}
+            src={`https:${node.data.target.fields.file.url}?w=800&h=500&q=60&fl=progressive`}
             alt={node.data.target.fields.title}
             layout="fill"
             placeholder="blur"
@@ -150,50 +149,17 @@ const PerPosts = ({ article }) => {
 
       <article className="SingleBlogPost">
         <div className="top_heading">
-          <span className="SBP-category">
-            {article?.fields?.category?.fields?.categoryName}
-          </span>
-
-          <h1 className="SBP-title">{article.fields?.title}</h1>
-
-          <div className="sbp-author-date">
-            <span className="sbp-author_section">
-              <div className="sbp-author-date_wrapper">
-                <div className="sbp-author_image_wrapper">
-                  <Image
-                    src={`https:${article.fields?.author[0]?.fields?.picture?.fields?.file?.url}?w=400&h=200&q=20&fm=webp`}
-                    alt={`${article.fields?.name} on ${siteTitle}`}
-                    layout="fill"
-                    placeholder="blur"
-                    blurDataURL={`https:${article.fields?.picture?.fields?.file?.url}`}
-                    objectFit="cover"
-                  />
-                </div>
-                <div className="sbp-author-name_wrapper">
-                  <p className="sbp-author-name">
-                    {article.fields?.author[0]?.fields?.name}
-                  </p>
-                  <span className="sbp-date">
-                    Updated{" "}
-                    {dayjs(article.sys?.updatedAt).format("MMM DD, YYYY")}
-                  </span>
-                </div>
-              </div>
-            </span>
-          </div>
-        </div>
-
-        <div className="SBP-featured__wrapper">
-          <Image
-            src={`https:${article.fields?.featuredImage?.fields?.file?.url}?w=900&h=500&q=80&fm=webp`}
-            alt={`${article.fields?.title}'s featured image on Techanaut`}
-            placeholder="blur"
-            blurDataURL={`https:${article.fields?.featuredImage?.fields?.file?.url}`}
-            layout="fill"
-            objectFit="cover"
-            loading="eager"
+          <ArticleHero
+            articlefeaturedImage={
+              article.fields?.featuredImage?.fields?.file?.url
+            }
+            articleCategory={article?.fields?.category?.fields?.categoryName}
+            articleTitle={article.fields?.title}
+            articleAuthor={article.fields?.author[0]?.fields?.name}
+            articleDate={article.sys?.updatedAt}
           />
         </div>
+
         <div className="actual_content">
           <div className="SBP-content">
             <div className="SBP-content_wrapper">

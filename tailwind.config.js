@@ -20,8 +20,10 @@ module.exports = {
       },
       fontFamily: {
         ibm_reg: "IBM Plex Sans Regular",
+        ibm_med: "IBM Plex Sans Medium",
         ahrefs_regular: "Ahrefs Regular",
         ahrefs_bold: "Ahrefs Bold",
+        ahrefs_display: "Ahrefs Display",
         ahrefs_con: "Ahrefs Condensed Bold",
       },
     },

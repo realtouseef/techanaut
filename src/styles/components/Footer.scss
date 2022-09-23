@@ -1,7 +1,8 @@
 footer {
+  @apply bg-slate-800 text-btn_text_hover;
   .footer_wrapper {
     @apply container_12 text-center;
-    @apply py-7 border-t;
+    @apply py-7;
     @apply my-6 mx-4 xl:mx-auto select-none;
 
     .footer_left {
@@ -15,10 +16,10 @@ footer {
 
       .footer_para {
         @apply max-w-screen-md mx-auto my-4;
-        @apply text-xs text-primary_text;
+        @apply text-xs text-btn_text_hover;
 
         small {
-          @apply text-primary_text;
+          @apply text-btn_text_hover;
         }
       }
     }

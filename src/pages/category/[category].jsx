@@ -2,7 +2,7 @@ import { createClient } from "contentful";
 import Layout from "@/components/Layout";
 import safeJsonStringify from "safe-json-stringify";
 import Link from "next/link";
-import Image from "next/image";
+import Hero from "@/components/Hero";
 import Head from "next/head";
 import { SiteData } from "@/utils/SiteData";
 
@@ -69,10 +69,10 @@ const Category = ({ category }) => {
         />
       </Head>
       <main className="category_main">
-        <article className="category_inner">
-          <h1 className="category_h1">{category.fields?.categoryName}</h1>
-          <p className="category_p">{category.fields?.description}</p>
-        </article>
+        <Hero
+          heroTitle={category.fields?.categoryName}
+          heroDescription={category.fields?.description}
+        />
         <article>
           <div className="cat_articles">
             {!category.fields?.categoryBlogs ? (
@@ -102,7 +102,9 @@ const Category = ({ category }) => {
                       </div> */}
                       <div className="cat_feat_content">
                         <h2 className="cat_feat_title">{item.fields?.title}</h2>
-                        <span>Explore</span>
+                        <p className="cat_feat_excerpt">
+                          {item.fields?.excerpt}
+                        </p>
                       </div>
                     </a>
                   </Link>
