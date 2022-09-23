@@ -1,26 +1,24 @@
 body {
-  @apply bg-white font-montserrat;
+  @apply bg-white font-ahrefs_regular;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5 {
-  @apply font-bold text-base-dark;
+p {
+  @apply font-ibm_reg text-[#333];
 }
 
 .author_date {
   @apply flex items-center justify-start;
   @apply text-xs;
-  @apply text-base-dark/80;
 }
 
 .wrapper_svg {
   @apply w-6 h-6;
+}
+
+.container_12 {
+  @apply max-w-[1200px];
+}
+
+.article_container {
+  @apply max-w-[700px];
 }

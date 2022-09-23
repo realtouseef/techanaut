@@ -1,29 +1,29 @@
 .blog-home {
   @apply grid grid-cols-1 md:grid-cols-2 gap-6 place-items-center;
-  @apply max-w-4xl mx-auto my-8;
+  @apply container mx-auto my-8;
 
   .blog-home_wrapper {
-    &:hover {
-      .inner_featured_img {
-        @apply lg:scale-105 transition-transform duration-300 ease-in-out;
-      }
-
-      .content-below_h1 {
-        .below_h1_span {
-          @apply bg-gradient-to-r from-green-200 to-green-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_6px] group-hover:bg-[length:100%_10px];
-        }
-      }
-    }
     &_inner {
-      @apply max-w-fit;
-      @apply cursor-pointer;
+      @apply max-w-[380px] lg:max-w-[480px] xl:max-w-[580px];
+      @apply cursor-pointer px-3 lg:px-4 xl:px-8 py-10;
+
+      &:first-child {
+        @apply bg-btn_bg;
+      }
 
       .inner-wrapper_inside {
         @apply flex flex-col items-start justify-center;
         @apply p-2;
-        @apply max-w-md;
+        @apply w-[340px] lg:w-[450px] xl:w-[530px];
         @apply transition-shadow duration-150 ease-in;
 
+        &:hover {
+          .content-below-image {
+            .content-below_h1 {
+              @apply text-text_hover;
+            }
+          }
+        }
         .inner_featured_img {
           @apply relative;
 
@@ -35,14 +35,14 @@
           @apply space-y-2;
 
           .category_tag {
-            @apply text-sm font-semibold text-green-500 tracking-wide uppercase;
+            @apply text-sm font-semibold text-primary_text tracking-wide uppercase;
           }
 
           .content-below_h1 {
-            @apply text-lg md:text-xl text-base-primary font-semibold;
+            @apply text-lg md:text-4xl font-ahrefs_bold text-primary_heading;
           }
           .excerpt {
-            @apply text-sm text-base-dark/90;
+            @apply text-base max-w-[500px] py-3 text-primary_text;
           }
           .author_date {
             @apply tracking-wide;
@@ -68,7 +68,7 @@
           }
           .blogs-stuff {
             @apply flex items-center justify-between;
-            @apply text-xs;
+            @apply text-[14px];
 
             .blog-home_author_date {
               @apply ml-2;

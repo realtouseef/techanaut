@@ -1,9 +1,8 @@
 footer {
-  @apply max-w-screen-lg mx-auto;
-
   .footer_wrapper {
+    @apply container_12 text-center;
     @apply py-7 border-t;
-    @apply my-6 mx-4 lg:mx-auto select-none;
+    @apply my-6 mx-4 xl:mx-auto select-none;
 
     .footer_left {
       @apply flex flex-col items-center justify-center;
@@ -16,10 +15,10 @@ footer {
 
       .footer_para {
         @apply max-w-screen-md mx-auto my-4;
-        @apply text-xs text-[#828282];
+        @apply text-xs text-primary_text;
 
         small {
-          @apply text-[#8a8a8a];
+          @apply text-primary_text;
         }
       }
     }

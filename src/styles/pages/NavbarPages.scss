@@ -1,5 +1,5 @@
 .pages_wrapper {
-  @apply max-w-4xl px-4 lg:mx-auto mt-10;
+  @apply article_container px-4 lg:mx-auto mt-10;
 
   h1 {
     @apply text-3xl lg:text-4xl my-4 font-semibold;
@@ -20,16 +20,16 @@
     @apply py-3;
 
     a {
-      @apply px-4 py-3 bg-base-secondary/10 hover:bg-base-secondary/20 text-base-secondary font-bold tracking-wide;
+      @apply px-4 py-3 bg-nav_btns hover:bg-btn_bg_hover text-primary_bg hover:text-text_hover font-bold tracking-wide;
     }
   }
 
   p {
-    @apply my-5 text-base-primary text-lg leading-relaxed;
+    @apply my-5 text-primary_text text-lg leading-relaxed;
   }
 
   a {
-    @apply text-base-secondary underline;
+    @apply text-primary_heading hover:text-text_hover underline;
   }
 
   ul {

@@ -24,10 +24,10 @@ export async function getStaticProps() {
       // helps in decreasing the size
       blogPosts: data.map(
         ({
-          fields: { title, author, featuredImage, slug, category },
+          fields: { title, author, featuredImage, slug, excerpt, category },
           sys: { id, updatedAt },
         }) => ({
-          fields: { title, author, featuredImage, slug, category },
+          fields: { title, author, featuredImage, slug, excerpt, category },
           sys: { id, updatedAt },
         })
       ),

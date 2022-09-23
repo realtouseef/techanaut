@@ -7,13 +7,22 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "base-primary": "#262626",
-        "base-secondary": "#3d74ed",
-        "base-dark": "#1f2633",
-        "base-light": "#ffffff",
+        primary_bg: "#054ada",
+        primary_text: "#333333",
+        primary_heading: "#054ada",
+        text_hover: "#ff6900",
+        btn_bg: "#e5ecfb",
+        btn_bg_hover: "#054ada",
+        btn_text: "#054ada",
+        btn_text_hover: "#ffffff",
+        nav_btns: "#b4c9f4",
+        nav_btns_hover: "#ffffff",
       },
       fontFamily: {
-        montserrat: "Montserrat",
+        ibm_reg: "IBM Plex Sans Regular",
+        ahrefs_regular: "Ahrefs Regular",
+        ahrefs_bold: "Ahrefs Bold",
+        ahrefs_con: "Ahrefs Condensed Bold",
       },
     },
   },

@@ -1,53 +1,60 @@
 .SingleBlogPost {
-  @apply max-w-screen-lg mx-auto text-center mt-12;
+  @apply container_12 mx-auto text-center mt-12;
 
   .sbp_amz {
     @apply max-w-screen-md mx-8 md:mx-auto my-10 text-left py-6 px-8 rounded-md text-sm bg-[#fafafa] text-[#8a8a8a];
   }
 
   .SBP-featured__wrapper {
-    @apply relative max-w-screen-lg overflow-hidden z-0 aspect-video;
+    @apply relative overflow-hidden z-0 aspect-video;
   }
 
-  .actual_content {
-    @apply max-w-screen-md mx-auto px-5 lg:px-0 py-5 lg:py-8;
+  .top_heading {
+    @apply article_container mx-auto;
 
     .SBP-category {
-      @apply text-sm text-green-600 font-bold tracking-wide uppercase;
+      @apply text-base text-btn_text font-bold tracking-wide uppercase;
     }
 
     .SBP-title {
-      @apply mt-2 mb-3 text-3xl font-bold tracking-tight text-center lg:leading-snug bg-gradient-to-r from-fuchsia-600 via-pink-400 to-purple-600 bg-clip-text text-transparent lg:text-4xl;
+      @apply max-w-[550px] mx-auto md:max-w-[650px] mt-2 mb-3 px-4 lg:px-0 text-2xl md:text-3xl font-ahrefs_con text-center lg:leading-10 lg:text-5xl;
     }
-
     .sbp-author-date {
-      @apply flex flex-col items-center justify-center;
+      @apply my-6;
 
       .sbp-author_section {
-        @apply flex items-center justify-center;
-
-        .sbp-author_image {
-          @apply relative w-10 h-10 mr-2;
-
-          img {
-            @apply rounded-full;
-          }
-        }
         .sbp-author-date_wrapper {
-          @apply flex flex-col items-start justify-center;
+          @apply flex flex-col md:flex-row items-center justify-center text-xl text-primary_text md:space-x-4;
 
-          .sbp-author-name {
-            @apply text-gray-800 font-semibold;
+          .sbp-author_image_wrapper {
+            @apply relative w-14 h-14;
+
+            img {
+              @apply rounded-full;
+            }
           }
 
-          .sbp-date {
-            @apply text-gray-500 text-sm;
+          .sbp-author-name_wrapper {
+            @apply flex flex-col items-start justify-center;
+            .sbp-author-name {
+              @apply text-[20px];
+            }
+
+            .sbp-date {
+              @apply text-sm;
+            }
           }
         }
       }
     }
+  }
+
+  .actual_content {
+    @apply px-5 lg:px-0 py-5 lg:py-8;
 
     .SBP-content {
+      @apply article_container mx-auto;
+
       .SBP-content_wrapper {
         @apply text-left;
       }
@@ -59,13 +66,13 @@
       @apply text-3xl lg:text-4xl my-4 font-extrabold;
     }
     h2 {
-      @apply text-2xl lg:text-3xl font-extrabold my-4 bg-gradient-to-r from-purple-600 via-pink-400 to-fuchsia-600 bg-clip-text text-transparent;
+      @apply text-[32px] lg:text-5xl leading-[29px] font-ahrefs_con my-4 text-[#333];
     }
     h3 {
-      @apply text-xl lg:text-[26px] font-extrabold my-4;
+      @apply text-[28px] lg:text-[38px] leading-[42px] my-4;
     }
     h4 {
-      @apply text-lg lg:text-xl my-4;
+      @apply text-[22px] lg:text-[26px] my-4;
     }
     h5 {
       @apply text-lg my-4;
@@ -74,7 +81,7 @@
       @apply flex flex-col space-y-5 w-max py-3 mt-5 mb-10 text-sm sm:text-lg;
 
       a {
-        @apply px-4 py-3 bg-green-50 hover:bg-green-100 text-green-700 font-bold sm:tracking-wide no-underline;
+        @apply px-4 py-3 bg-btn_bg hover:bg-btn_bg_hover hover:text-btn_text_hover text-btn_text font-bold sm:tracking-wide no-underline;
       }
     }
 
@@ -82,7 +89,7 @@
       @apply font-extrabold;
     }
     p {
-      @apply my-5 text-gray-800 text-lg leading-relaxed tracking-wide;
+      @apply my-5 text-primary_text text-[20px] leading-[29px] tracking-wide;
 
       a {
         u {
@@ -92,14 +99,14 @@
     }
 
     a {
-      @apply text-green-600 underline;
+      @apply text-primary_heading hover:text-text_hover underline;
     }
 
     ul {
       @apply list-outside list-disc;
 
       li {
-        @apply flex items-center justify-start before:content-["⭐"] before:mr-5;
+        @apply flex items-center justify-start;
 
         &:last-child {
           @apply mb-8;
@@ -112,17 +119,16 @@
     }
 
     blockquote {
-      @apply pl-6 pr-4;
-      @apply border-l-4 border-base-secondary;
-      @apply text-sm italic;
+      @apply pl-6 pr-4 py-2;
+      @apply border-l-4 bg-nav_btns/20 border-l-btn_bg_hover text-nav_btns_hover;
 
       p {
-        @apply text-lg font-semibold;
+        @apply text-xl;
       }
     }
 
     .SBP_img_asset_wrapper {
-      @apply relative aspect-video mt-4 mb-7;
+      @apply relative w-[20rem] h-[20rem] sm:w-[30rem] sm:h-[30rem] md:w-[38rem] md:h-[30rem] lg:w-[43.75rem] lg:h-[36rem] mt-4 mb-7 overflow-hidden;
     }
   }
 }

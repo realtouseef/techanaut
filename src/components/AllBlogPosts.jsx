@@ -14,7 +14,7 @@ const AllBlogPosts = ({ blogPosts }) => {
               <div className="blog-home_wrapper_inner">
                 <div className="blog-home_wrapper">
                   <div className="inner-wrapper_inside">
-                    <div className="inner_featured_img">
+                    {/* <div className="inner_featured_img">
                       <Image
                         src={`https:${fields?.featuredImage?.fields?.file?.url}?w=700&h=350&q=50&fm=webp`}
                         alt={`${fields?.title}'s featured Image on Techanaut`}
@@ -29,7 +29,7 @@ const AllBlogPosts = ({ blogPosts }) => {
                         placeholder="blur"
                         blurDataURL={`https:${fields?.featuredImage?.fields?.file?.url}`}
                       />
-                    </div>
+                    </div> */}
 
                     <div className="content-below-image">
                       <span className="category_tag">
@@ -38,7 +38,7 @@ const AllBlogPosts = ({ blogPosts }) => {
                       <h1 className="content-below_h1">
                         <span className="below_h1_span">{fields?.title}</span>
                       </h1>
-                      {/* <p className="excerpt">{fields?.excerpt}</p> */}
+                      <p className="excerpt">{fields?.excerpt}</p>
 
                       <div className="author_date blogs-stuff">
                         <div className="author_wrapper_allblogs">

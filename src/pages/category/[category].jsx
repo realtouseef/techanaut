@@ -84,7 +84,7 @@ const Category = ({ category }) => {
                 return (
                   <Link href={`/blog/${item.fields?.slug}`} key={item.sys?.id}>
                     <a className="cat_article_link">
-                      <div className="cat_feat_wrapper">
+                      {/* <div className="cat_feat_wrapper">
                         <Image
                           src={`https:${item.fields?.featuredImage?.fields?.file?.url}?q=20&fm=jpg&fl=progressive`}
                           alt={`${item.fields?.title}'s featured Image`}
@@ -99,10 +99,10 @@ const Category = ({ category }) => {
                           placeholder="blur"
                           blurDataURL={`https:${item.fields?.featuredImage?.fields?.file?.url}`}
                         />
-                      </div>
+                      </div> */}
                       <div className="cat_feat_content">
-                        <h2>{item.fields?.title}</h2>
-                        <span>Read More</span>
+                        <h2 className="cat_feat_title">{item.fields?.title}</h2>
+                        <span>Explore</span>
                       </div>
                     </a>
                   </Link>

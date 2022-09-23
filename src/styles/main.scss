@@ -3,10 +3,29 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@font-face {
+  font-family: "IBM Plex Sans Regular";
+  src: url(/IBMPlexSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Ahrefs Regular";
+  src: url(/ahrefs_regular.woff2);
+}
+
+@font-face {
+  font-family: "Ahrefs Bold";
+  src: url(/ahrefs_bold.woff2);
+}
+
+@font-face {
+  font-family: "Ahrefs Condensed Bold";
+  src: url(/ahrefs_condensedbold.woff2);
+}
+
 // pages
-// @import "./pages/blogPost.scss";
 @import "./pages/updatedLayoutBlog.scss";
-@import "./pages/Pages.scss";
+@import "./pages/NavbarPages.scss";
 @import "./pages/FourOFour.scss";
 
 // components

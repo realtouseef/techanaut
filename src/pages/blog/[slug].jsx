@@ -8,6 +8,7 @@ import safeJsonStringify from "safe-json-stringify";
 import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 import { SiteData } from "@/utils/SiteData";
 import ArticleSEO from "@/utils/ArticleSEO";
+import Link from "next/link";
 
 // dynamic imports
 const ArticleLayout = dynamic(() => import("@/components/ArticleLayout"));
@@ -96,11 +97,10 @@ const renderOptions = {
       // render the EMBEDDED_ASSET as you need
       // remove the contentType `image/jpg`
       // and take the second part with slice()
-      console.log(node);
       return (
         <div className="SBP_img_asset_wrapper">
           <Image
-            src={`https:${node.data.target.fields.file.url}?w=900&h=500&q=40&fl=progressive`}
+            src={`https:${node.data.target.fields.file.url}?w=800&h=400&q=30&fl=progressive`}
             alt={node.data.target.fields.title}
             layout="fill"
             placeholder="blur"
@@ -149,7 +149,7 @@ const PerPosts = ({ article }) => {
       />
 
       <article className="SingleBlogPost">
-        <div className="actual_content">
+        <div className="top_heading">
           <span className="SBP-category">
             {article?.fields?.category?.fields?.categoryName}
           </span>
@@ -158,24 +158,26 @@ const PerPosts = ({ article }) => {
 
           <div className="sbp-author-date">
             <span className="sbp-author_section">
-              <div className="sbp-author_image">
-                <Image
-                  src={`https:${article.fields?.author[0]?.fields?.picture?.fields?.file?.url}?w=400&h=200&q=20&fm=webp`}
-                  alt={`${article.fields?.author[0]?.fields?.name}'s profile picture on ${siteTitle}`}
-                  layout="fill"
-                  objectFit="cover"
-                  placeholder="blur"
-                  blurDataURL={`https:${article.fields?.author[0]?.fields?.picture?.fields?.file?.url}`}
-                />
-              </div>
               <div className="sbp-author-date_wrapper">
-                <span className="sbp-author-name">
-                  {article.fields?.author[0]?.fields?.name}
-                </span>
-
-                <span className="sbp-date">
-                  {dayjs(article.sys?.updatedAt).format("MMM DD, YYYY")}
-                </span>
+                <div className="sbp-author_image_wrapper">
+                  <Image
+                    src={`https:${article.fields?.author[0]?.fields?.picture?.fields?.file?.url}?w=400&h=200&q=20&fm=webp`}
+                    alt={`${article.fields?.name} on ${siteTitle}`}
+                    layout="fill"
+                    placeholder="blur"
+                    blurDataURL={`https:${article.fields?.picture?.fields?.file?.url}`}
+                    objectFit="cover"
+                  />
+                </div>
+                <div className="sbp-author-name_wrapper">
+                  <p className="sbp-author-name">
+                    {article.fields?.author[0]?.fields?.name}
+                  </p>
+                  <span className="sbp-date">
+                    Updated{" "}
+                    {dayjs(article.sys?.updatedAt).format("MMM DD, YYYY")}
+                  </span>
+                </div>
               </div>
             </span>
           </div>
@@ -183,7 +185,7 @@ const PerPosts = ({ article }) => {
 
         <div className="SBP-featured__wrapper">
           <Image
-            src={`https:${article.fields?.featuredImage?.fields?.file?.url}?w=900&h=500&q=50&fm=jpg&fl=progressive`}
+            src={`https:${article.fields?.featuredImage?.fields?.file?.url}?w=900&h=500&q=80&fm=webp`}
             alt={`${article.fields?.title}'s featured image on Techanaut`}
             placeholder="blur"
             blurDataURL={`https:${article.fields?.featuredImage?.fields?.file?.url}`}
