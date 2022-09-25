@@ -14,7 +14,6 @@ export async function getStaticProps() {
     space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
     accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
   });
-
   const res = await client.getEntries({ content_type: "blog" });
   const stringifiedData = safeJsonStringify(res.items);
   const data = JSON.parse(stringifiedData);
@@ -46,6 +45,7 @@ const Home = ({ blogPosts }) => {
     siteUrl,
     siteImage,
   } = SiteData;
+
   return (
     <>
       <Layout>
@@ -69,9 +69,9 @@ const Home = ({ blogPosts }) => {
           <meta property="og:locale" content="en_US" />
           <meta property="og:type" content="website" />
           <meta property="og:image" content={siteImage} />
-          <meta property="og:image:width" content="500" />
-          <meta property="og:image:height" content="250" />
-          <meta property="og:image:type" content="image/jpg" />
+          <meta property="og:image:width" content="400" />
+          <meta property="og:image:height" content="200" />
+          <meta property="og:image:type" content="image/png" />
           <meta property="keywords" content={siteKeywords} />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content={`@${siteTitle}`} />

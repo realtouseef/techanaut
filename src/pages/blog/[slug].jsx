@@ -8,6 +8,7 @@ import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 import { SiteData } from "@/utils/SiteData";
 import ArticleSEO from "@/utils/ArticleSEO";
 import ArticleHero from "@/components/ArticleHero";
+import TwoArticlesUnderArticle from "@/components/TwoArticlesUnderArticle";
 
 // dynamic imports
 const ArticleLayout = dynamic(() => import("@/components/ArticleLayout"));
@@ -96,16 +97,19 @@ const renderOptions = {
       // render the EMBEDDED_ASSET as you need
       // remove the contentType `image/jpg`
       // and take the second part with slice()
+      let imgWidth = node.data.target.fields.file.details.image.width;
+      let imgHeight = node.data.target.fields.file.details.image.height;
       return (
-        <div className="SBP_img_asset_wrapper">
-          <Image
-            src={`https:${node.data.target.fields.file.url}?w=800&h=500&q=60&fl=progressive`}
-            alt={node.data.target.fields.title}
-            layout="fill"
-            placeholder="blur"
-            blurDataURL={`https:${node.data.target.fields.file.url}`}
-          />
-        </div>
+        // <div className="SBP_img_asset_wrapper">
+        <Image
+          src={`https:${node.data.target.fields.file.url}?w=${imgWidth}&h=${imgHeight}&q=60&fl=progressive`}
+          alt={node.data.target.fields.title}
+          width={imgWidth}
+          height={imgHeight}
+          placeholder="blur"
+          blurDataURL={`https:${node.data.target.fields.file.url}`}
+        />
+        // </div>
       );
     },
   },
@@ -179,6 +183,7 @@ const PerPosts = ({ article }) => {
         </div>
         {/* {isBuyingGuide && <p className="sbp_amz">{siteAffiliateDisclosure}</p>} */}
       </article>
+      <TwoArticlesUnderArticle />
     </ArticleLayout>
   );
 };

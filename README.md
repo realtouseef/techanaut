@@ -31,21 +31,22 @@ author box -- 193px
 
 ## Priority TODOs
 
-- [ ] create another favicon with ahref style.
-
-- [ ] Add table of content
-
-- [ ] Print 2 headings of latest articles under the article
-  - both of the articles should be from the category the user is on.
+- [ ] put a key
+- [ ] main image is not showing when shared on fb or twitter
 
 ## TODOs
 
 - [ ] Create a scraper that goes through the amazon products that are listed on my site and see if there's a discount going on, if yes, show the discounted price
 
+- [ ] create an author box component to place next to articles
+
 - [ ] Pagination
 
 ## Completed TODOs
 
+- [x] Print 2 headings of latest articles under the article
+  - both of the articles should be from the category the user is on. (just printed 2 articles from any category)
+- [x] create another favicon with ahref style.
 - [x] Write copy for about, gaming laptop, peripherals,
 - [x] Copy ahrefs/blog design
 - [x] fix the sitemap and robots.txt issue -- cannot be indexed cos of these.
@@ -56,3 +57,5 @@ author box -- 193px
 ## Can't be complete
 
 - [ ] add `rel=sponsor` to the `anchor tag` inside `h6` aka. view price button (returns every link of the post -- cant put `rel-sponsor` to linking to other articles)
+
+- [ ] Add table of content (can't find the correct the content type for it, a bit confusing)

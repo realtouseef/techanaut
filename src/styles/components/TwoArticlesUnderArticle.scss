@@ -1,0 +1,29 @@
+.two_articles {
+  @apply container_12 mx-auto my-10 border-t-2 border-b-2;
+
+  .two_articles_latest {
+    @apply text-center mt-8 mb-12 text-4xl font-ahrefs_con text-primary_text;
+  }
+
+  .two_articles_wrapper {
+    @apply flex flex-col md:flex-row items-start justify-between space-y-5 md:space-y-0 md:space-x-4 mb-10;
+
+    .two_articles_a {
+      @apply max-w-full md:max-w-md lg:max-w-lg;
+
+      &:hover {
+        .two_articles_explore {
+          @apply text-primary_heading;
+        }
+      }
+
+      .two_articles_heading {
+        @apply text-3xl font-ahrefs_display text-primary_heading hover:text-text_hover;
+      }
+
+      .two_articles_explore {
+        @apply text-lg font-ibm_med font-bold mt-4;
+      }
+    }
+  }
+}
