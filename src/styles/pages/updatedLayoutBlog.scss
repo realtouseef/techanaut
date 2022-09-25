@@ -1,12 +1,11 @@
 .SingleBlogPost {
-  @apply text-center;
-
-  .sbp_amz {
-    @apply max-w-screen-md mx-8 md:mx-auto my-10 text-left py-6 px-8 rounded-md text-sm bg-[#fafafa] text-[#8a8a8a];
-  }
+  // .sbp_amz {
+  //   @apply max-w-screen-md mx-8 md:mx-auto my-10 text-left py-6 px-8 rounded-md text-sm bg-[#fafafa] text-[#8a8a8a];
+  // }
 
   .actual_content {
     @apply px-5 lg:px-0 py-5 lg:py-8;
+    @apply flex container_12 mx-auto;
 
     .SBP-content {
       @apply article_container mx-auto;

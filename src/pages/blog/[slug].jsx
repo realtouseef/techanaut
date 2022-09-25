@@ -9,6 +9,7 @@ import { SiteData } from "@/utils/SiteData";
 import ArticleSEO from "@/utils/ArticleSEO";
 import ArticleHero from "@/components/ArticleHero";
 import TwoArticlesUnderArticle from "@/components/TwoArticlesUnderArticle";
+import AuthorBox from "@/components/AuthorBox";
 
 // dynamic imports
 const ArticleLayout = dynamic(() => import("@/components/ArticleLayout"));
@@ -95,12 +96,9 @@ const renderOptions = {
 
     [BLOCKS.EMBEDDED_ASSET]: (node) => {
       // render the EMBEDDED_ASSET as you need
-      // remove the contentType `image/jpg`
-      // and take the second part with slice()
       let imgWidth = node.data.target.fields.file.details.image.width;
       let imgHeight = node.data.target.fields.file.details.image.height;
       return (
-        // <div className="SBP_img_asset_wrapper">
         <Image
           src={`https:${node.data.target.fields.file.url}?w=${imgWidth}&h=${imgHeight}&q=60&fl=progressive`}
           alt={node.data.target.fields.title}
@@ -109,7 +107,6 @@ const renderOptions = {
           placeholder="blur"
           blurDataURL={`https:${node.data.target.fields.file.url}`}
         />
-        // </div>
       );
     },
   },
@@ -180,9 +177,17 @@ const PerPosts = ({ article }) => {
               />
             </div> */}
           </div>
+          <AuthorBox
+            authorImage={
+              article.fields?.author[0]?.fields?.picture?.fields?.file?.url
+            }
+            authorName={article.fields?.author[0]?.fields?.name}
+            authorDescription={article.fields?.author[0]?.fields?.bio}
+          />
         </div>
         {/* {isBuyingGuide && <p className="sbp_amz">{siteAffiliateDisclosure}</p>} */}
       </article>
+
       <TwoArticlesUnderArticle />
     </ArticleLayout>
   );

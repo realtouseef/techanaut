@@ -68,6 +68,7 @@ const Home = ({ blogPosts }) => {
           <meta property="description" content={siteDescription} />
           <meta property="og:locale" content="en_US" />
           <meta property="og:type" content="website" />
+          <meta property="image" content={siteImage} />
           <meta property="og:image" content={siteImage} />
           <meta property="og:image:width" content="400" />
           <meta property="og:image:height" content="200" />

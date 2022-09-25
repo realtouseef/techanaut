@@ -31,19 +31,16 @@ author box -- 193px
 
 ## Priority TODOs
 
-- [ ] put a key
-- [ ] main image is not showing when shared on fb or twitter
+- [ ] Pagination
 
 ## TODOs
 
 - [ ] Create a scraper that goes through the amazon products that are listed on my site and see if there's a discount going on, if yes, show the discounted price
 
-- [ ] create an author box component to place next to articles
-
-- [ ] Pagination
-
 ## Completed TODOs
 
+- [x] create an author box component to place next to articles
+- [x] main image is not showing when shared on fb or twitter
 - [x] Print 2 headings of latest articles under the article
   - both of the articles should be from the category the user is on. (just printed 2 articles from any category)
 - [x] create another favicon with ahref style.
@@ -53,9 +50,12 @@ author box -- 193px
 - [x] GSC is crying about `cannot reach robots.txt`
 - [x] fix the main page image when shared on fb
 - [x] The image that shows up when you share the site on facebook/messenger is not working.
+- [x] put a key in `TwoArticlesUnderArticle`
 
 ## Can't be complete
 
 - [ ] add `rel=sponsor` to the `anchor tag` inside `h6` aka. view price button (returns every link of the post -- cant put `rel-sponsor` to linking to other articles)
 
 - [ ] Add table of content (can't find the correct the content type for it, a bit confusing)
+
+- [ ] create a breadcrump (created by didn't like the overall design of it and the placement then deleted.)

@@ -1,0 +1,24 @@
+.author_box {
+  @apply hidden lg:inline-block;
+
+  &_wrapper {
+    @apply max-w-[193px] text-left;
+
+    .author_box_image_wrapper {
+      @apply relative h-20 w-20;
+
+      img {
+        @apply rounded-full;
+      }
+    }
+
+    .author_box_text_wrapper {
+      .author_box_name {
+        @apply my-2 text-2xl font-ahrefs_bold;
+      }
+      .author_box_description {
+        @apply m-0 text-base;
+      }
+    }
+  }
+}
