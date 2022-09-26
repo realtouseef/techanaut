@@ -12,33 +12,41 @@ Amazon Affiliate site built w/ NextJS, Contentful, Tailwind CSS, and Sass.
 
 ## colors
 
-#054ada -- primary blue color
-#333333 -- primary text color
-#e5ecfb -- button background (before hover)
-#054ada -- button background (after hover)
-#054ada -- button text color (before hover)
-#ffffff -- button text color (after hover)
-#b4c9f4 -- navbar buttons (before hover)
-#ffffff -- navbar buttons (after hover)
-#ff6900 -- links (after hover)
+- #054ada -- primary blue color
+- #333333 -- primary text color
+- #e5ecfb -- button background (before hover)
+- #054ada -- button background (after hover)
+- #054ada -- button text color (before hover)
+- #ffffff -- button text color (after hover)
+- #b4c9f4 -- navbar buttons (before hover)
+- #ffffff -- navbar buttons (after hover)
+- #ff6900 -- links (after hover)
 
 ## width
 
-Container -- 1190px (1200px)
-Actual article content -- 650px (255px x-padding)
-Table of content -- 240px
-author box -- 193px
+- Container -- 1190px (1200px)
+- Actual article content -- 650px (255px x-padding)
+- Table of content -- 240px
+- author box -- 193px
 
 ## Priority TODOs
 
-- [ ] Pagination
+- [ ] create an author page with all the blog posts shown `/author`
 
 ## TODOs
 
 - [ ] Create a scraper that goes through the amazon products that are listed on my site and see if there's a discount going on, if yes, show the discounted price
 
+## Delayed TODOs
+
+- [ ] Pagination **using a `show more` button** (will start workin on this when the site is 10 articles published -- till that, it is delayed.)
+  <!-- Page-1: skip=0, limit=10 -->
+  <!-- Page-2: skip=10, limit=10 -->
+  <!-- Page-3: skip=20, limit=10 -->
+
 ## Completed TODOs
 
+- [x] change the footer
 - [x] create an author box component to place next to articles
 - [x] main image is not showing when shared on fb or twitter
 - [x] Print 2 headings of latest articles under the article

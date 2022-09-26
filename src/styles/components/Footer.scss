@@ -1,12 +1,12 @@
 footer {
   @apply bg-slate-800 text-btn_text_hover;
+
   .footer_wrapper {
-    @apply container_12 text-center;
-    @apply py-7;
-    @apply my-6 mx-4 xl:mx-auto select-none;
+    @apply container_12 text-center flex flex-col lg:flex-row items-center lg:items-start justify-between;
+    @apply py-7 my-6 mx-4 xl:mx-auto select-none;
 
     .footer_left {
-      @apply flex flex-col items-center justify-center;
+      @apply flex flex-col items-center lg:items-start justify-center mb-6 lg:mb-0;
 
       .footer_logo {
         a {
@@ -15,12 +15,20 @@ footer {
       }
 
       .footer_para {
-        @apply max-w-screen-md mx-auto my-4;
+        @apply max-w-md mx-auto my-4 text-left;
         @apply text-xs text-btn_text_hover;
 
         small {
           @apply text-btn_text_hover;
         }
+      }
+    }
+
+    .footer_right {
+      @apply flex flex-col sm:flex-row lg:flex-col items-center sm:items-start justify-center space-y-4 sm:space-y-0 lg:space-y-4 space-x-4 lg:space-x-0;
+
+      .footer_right_items {
+        @apply text-xl hover:text-text_hover;
       }
     }
   }

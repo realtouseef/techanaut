@@ -4,6 +4,20 @@ import dynamic from "next/dynamic";
 
 const Techanaut = dynamic(() => import("public/images/techanaut.svg"));
 
+const footerItems = [
+  { id: 1, itemName: "About", itemLink: "/about" },
+  {
+    id: 2,
+    itemName: "Terms and Conditions",
+    itemLink: "/terms-and-conditions",
+  },
+  {
+    id: 3,
+    itemName: "Affiliate Disclosure",
+    itemLink: "/affiliate-disclosure",
+  },
+];
+
 const Footer = () => {
   const { siteTitle, siteAffiliateDisclosure } = SiteData;
   return (
@@ -19,6 +33,15 @@ const Footer = () => {
           <small>
             © {new Date().getFullYear()} {siteTitle}. All rights reserved.
           </small>
+        </main>
+        <main className="footer_right">
+          {footerItems.map(({ id, itemName, itemLink }) => {
+            return (
+              <Link href={itemLink} key={id}>
+                <a className="footer_right_items">{itemName}</a>
+              </Link>
+            );
+          })}
         </main>
       </div>
     </footer>
