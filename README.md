@@ -32,6 +32,8 @@ Amazon Affiliate site built w/ NextJS, Contentful, Tailwind CSS, and Sass.
 ## Priority TODOs
 
 - [ ] create an author page with all the blog posts shown `/author`
+- [ ] show latest articles headings
+- [ ] make the category clickable
 
 ## TODOs
 
