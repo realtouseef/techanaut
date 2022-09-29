@@ -113,6 +113,7 @@ const renderOptions = {
 };
 
 const PerPosts = ({ article }) => {
+  console.log(article);
   // const [isBuyingGuide, setIsBuyingGuide] = useState(false);
   const { siteTitle, siteUrl, siteAffiliateDisclosure } = SiteData;
   // const buyingGuideCategory = article?.fields?.category?.fields?.categoryName;
@@ -178,6 +179,7 @@ const PerPosts = ({ article }) => {
             </div> */}
           </div>
           <AuthorBox
+            authorLink={`/author/${article.fields?.author[0]?.fields?.slug}`}
             authorImage={
               article.fields?.author[0]?.fields?.picture?.fields?.file?.url
             }

@@ -31,16 +31,13 @@ Amazon Affiliate site built w/ NextJS, Contentful, Tailwind CSS, and Sass.
 
 ## Priority TODOs
 
-- [ ] create an author page with all the blog posts shown `/author`
-- [ ] show latest articles headings
-- [ ] make the category clickable
-
 ## TODOs
 
 - [ ] Create a scraper that goes through the amazon products that are listed on my site and see if there's a discount going on, if yes, show the discounted price
 
 ## Delayed TODOs
 
+- [ ] create an author page with all the blog posts shown `/author` (no need to make unnecessary api calls, will work on it if vercel kicks us out of their free plan)
 - [ ] Pagination **using a `show more` button** (will start workin on this when the site is 10 articles published -- till that, it is delayed.)
   <!-- Page-1: skip=0, limit=10 -->
   <!-- Page-2: skip=10, limit=10 -->
@@ -48,7 +45,11 @@ Amazon Affiliate site built w/ NextJS, Contentful, Tailwind CSS, and Sass.
 
 ## Completed TODOs
 
+- [x] add keys to twoarticlesunderarticle
 - [x] change the footer
+- [x] show latest articles headings
+- [x] fix 404 page with similar design to other pages
+- [x] increase the size of article box in smaller screens with increased heading
 - [x] create an author box component to place next to articles
 - [x] main image is not showing when shared on fb or twitter
 - [x] Print 2 headings of latest articles under the article

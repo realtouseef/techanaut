@@ -4,7 +4,7 @@
 
   .blog-home_wrapper {
     &_inner {
-      @apply max-w-[380px] lg:max-w-[480px] xl:max-w-[580px];
+      @apply w-full lg:max-w-[480px] xl:max-w-[580px];
       @apply cursor-pointer px-3 lg:px-4 xl:px-8 py-10;
 
       &:first-child {
@@ -14,7 +14,7 @@
       .inner-wrapper_inside {
         @apply flex flex-col items-start justify-center;
         @apply p-2;
-        @apply w-[340px] lg:w-[450px] xl:w-[530px];
+        @apply lg:w-[450px] xl:w-[530px];
         @apply transition-shadow duration-150 ease-in;
 
         &:hover {
@@ -39,10 +39,10 @@
           }
 
           .content-below_h1 {
-            @apply text-lg md:text-4xl font-ahrefs_bold text-primary_heading;
+            @apply text-3xl md:text-4xl font-ahrefs_bold text-primary_heading;
           }
           .excerpt {
-            @apply text-base max-w-[500px] py-3 text-primary_text;
+            @apply text-lg max-w-[500px] py-3 text-primary_text;
           }
           .author_date {
             @apply tracking-wide;

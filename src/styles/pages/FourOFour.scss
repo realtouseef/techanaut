@@ -1,15 +1,13 @@
 .four_not-found {
   @apply max-w-4xl lg:mx-auto mx-5 mt-10;
-  h1 {
-    @apply mb-6 text-4xl font-semibold;
-  }
+
   p {
-    @apply text-xl mb-2 text-primary_text font-semibold;
+    @apply text-xl mb-4 text-primary_text;
   }
 
   button {
     @apply px-4 py-2 mt-4;
     @apply bg-btn_bg hover:bg-btn_bg_hover hover:text-btn_text_hover text-btn_text;
-    @apply font-semibold text-xl;
+    @apply text-xl;
   }
 }

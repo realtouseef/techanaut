@@ -1,6 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 
-const AuthorBox = ({ authorImage, authorName, authorDescription }) => {
+const AuthorBox = ({
+  authorImage,
+  authorName,
+  authorDescription,
+  authorLink,
+}) => {
   return (
     <>
       <div className="author_box">
@@ -15,10 +21,12 @@ const AuthorBox = ({ authorImage, authorName, authorDescription }) => {
               objectFit="cover"
             />
           </div>
-          <div className="author_box_text_wrapper">
-            <h1 className="author_box_name">{authorName}</h1>
-            <p className="author_box_description">{authorDescription}</p>
-          </div>
+          <Link href={authorLink}>
+            <a className="author_box_text_wrapper">
+              <h1 className="author_box_name">{authorName}</h1>
+              <p className="author_box_description">{authorDescription}</p>
+            </a>
+          </Link>
         </div>
       </div>
     </>

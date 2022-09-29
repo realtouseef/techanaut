@@ -26,10 +26,7 @@ const TwoArticlesUnderArticle = () => {
           {printPostTitle &&
             printPostTitle.map(({ fields }) => {
               return (
-                <Link
-                  href={fields?.slug}
-                  key={fields?.category?.fields?.sys?.id}
-                >
+                <Link href={fields?.slug} key={fields?.category?.sys?.id}>
                   <a className="two_articles_a">
                     <h2 className="two_articles_heading">{fields?.title}</h2>
                     <p className="two_articles_explore">Explore →</p>
