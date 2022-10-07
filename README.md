@@ -31,6 +31,9 @@ Amazon Affiliate site built w/ NextJS, Contentful, Tailwind CSS, and Sass.
 
 ## Priority TODOs
 
+- [ ] use on-demand ISR (lets you update the data in production w/out needing to redeploy)
+- [ ] use if(process.env.URL === "development") return dontCollectAnalytics
+
 ## TODOs
 
 - [ ] Create a scraper that goes through the amazon products that are listed on my site and see if there's a discount going on, if yes, show the discounted price

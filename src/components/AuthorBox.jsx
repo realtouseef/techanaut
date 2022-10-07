@@ -21,12 +21,18 @@ const AuthorBox = ({
               objectFit="cover"
             />
           </div>
-          <Link href={authorLink}>
+          {/* <Link href={authorLink}>
             <a className="author_box_text_wrapper">
               <h1 className="author_box_name">{authorName}</h1>
               <p className="author_box_description">{authorDescription}</p>
             </a>
-          </Link>
+          </Link> */}
+          <div>
+            <div className="author_box_text_wrapper">
+              <h1 className="author_box_name">{authorName}</h1>
+              <p className="author_box_description">{authorDescription}</p>
+            </div>
+          </div>
         </div>
       </div>
     </>
