@@ -1,0 +1,9 @@
+NEXT_PUBLIC_CONTENTFUL_SPACE_ID="jo6jom5g0w6p"
+NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN="uhxyI84wdbEMsuNrv_fx9VgkAOuE3jwdqV94c_T1dBs"
+
+NEXT_PUBLIC_CONTENTFUL_GRAPHQL_URL="https://graphql.contentful.com/content/v1/spaces/$NEXT_PUBLIC_CONTENTFUL_SPACE_ID/environments/master"
+
+# NEXT_PUBLIC_GOOGLE_ANALYTICS="G-BC2SQR64R9"
+
+SITE_URL = "https://techanaut.com"
+REVALIDATE_SECRET="touseefx"

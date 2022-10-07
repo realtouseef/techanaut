@@ -32,7 +32,6 @@ Amazon Affiliate site built w/ NextJS, Contentful, Tailwind CSS, and Sass.
 ## Priority TODOs
 
 - [ ] use on-demand ISR (lets you update the data in production w/out needing to redeploy)
-- [ ] use if(process.env.URL === "development") return dontCollectAnalytics
 
 ## TODOs
 
@@ -40,14 +39,16 @@ Amazon Affiliate site built w/ NextJS, Contentful, Tailwind CSS, and Sass.
 
 ## Delayed TODOs
 
-- [ ] create an author page with all the blog posts shown `/author` (no need to make unnecessary api calls, will work on it if vercel kicks us out of their free plan)
-- [ ] Pagination **using a `show more` button** (will start workin on this when the site is 10 articles published -- till that, it is delayed.)
+- [-] use if(process.env.URL === "development") return dontCollectAnalytics
+- [-] create an author page with all the blog posts shown `/author` (no need to make unnecessary api calls, will work on it if vercel kicks us out of their free plan)
+- [-] Pagination **using a `show more` button** (will start workin on this when the site is 10 articles published -- till that, it is delayed.)
   <!-- Page-1: skip=0, limit=10 -->
   <!-- Page-2: skip=10, limit=10 -->
   <!-- Page-3: skip=20, limit=10 -->
 
 ## Completed TODOs
 
+- [x] preload fonts
 - [x] add keys to twoarticlesunderarticle
 - [x] change the footer
 - [x] show latest articles headings

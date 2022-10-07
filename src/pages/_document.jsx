@@ -6,6 +6,43 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          {/* preloading fonts */}
+          <link
+            rel="preload"
+            href="/fonts/ahrefs_regular.woff2"
+            as="font"
+            type="font/woff2"
+          />
+          <link
+            rel="preload"
+            href="/fonts/ahrefs_display.woff2"
+            as="font"
+            type="font/woff2"
+          />
+          <link
+            rel="preload"
+            href="/fonts/ahrefs_bold.woff2"
+            as="font"
+            type="font/woff2"
+          />
+          <link
+            rel="preload"
+            href="/fonts/ahrefs_condensedbold.woff2"
+            as="font"
+            type="font/woff2"
+          />
+          <link
+            rel="preload"
+            href="/fonts/IBMPlexSans-Regular.ttf"
+            as="font"
+            type="font/ttf"
+          />
+          <link
+            rel="preload"
+            href="/fonts/IBMPlexSans-Medium.ttf"
+            as="font"
+            type="font/ttf"
+          />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <Script
             async
