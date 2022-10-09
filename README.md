@@ -36,6 +36,7 @@ Amazon Affiliate site built w/ NextJS, Contentful, Tailwind CSS, and Sass.
 ## TODOs
 
 - [ ] Create a scraper that goes through the amazon products that are listed on my site and see if there's a discount going on, if yes, show the discounted price
+- [ ] create a product box similar to (https://www.easypc.io/cpu/rtx-2060/)
 
 ## Delayed TODOs
 

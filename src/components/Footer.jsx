@@ -19,7 +19,7 @@ const footerItems = [
 ];
 
 const Footer = () => {
-  const { siteTitle, siteAffiliateDisclosure } = SiteData;
+  const { siteTitle, siteDescription } = SiteData;
   return (
     <footer>
       <div className="footer_wrapper">
@@ -29,7 +29,7 @@ const Footer = () => {
               <Techanaut />
             </a>
           </Link>
-          <p className="footer_para">{siteAffiliateDisclosure}</p>
+          <p className="footer_para">{siteDescription}</p>
           <small>
             © {new Date().getFullYear()} {siteTitle}. All rights reserved.
           </small>
