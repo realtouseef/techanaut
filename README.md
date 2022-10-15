@@ -31,15 +31,17 @@ Amazon Affiliate site built w/ NextJS, Contentful, Tailwind CSS, and Sass.
 
 ## Priority TODOs
 
-- [ ] use on-demand ISR (lets you update the data in production w/out needing to redeploy)
+- [ ] use on-demand ISR (lets you update the data in production w/out needing to redeploy) -- Contentful Webhooks to automatically redeploy site when anything is changed and trigger vercel to redeploy
 
 ## TODOs
 
-- [ ] Create a scraper that goes through the amazon products that are listed on my site and see if there's a discount going on, if yes, show the discounted price
+- [ ] Use AMP ( and search about it as well)
+- [ ] Event delegation for Table of Contents
 - [ ] create a product box similar to (https://www.easypc.io/cpu/rtx-2060/)
 
 ## Delayed TODOs
 
+- [-] Create a scraper that goes through the amazon products that are listed on my site and see if there's a discount going on, if yes, show the discounted price
 - [-] use if(process.env.URL === "development") return dontCollectAnalytics
 - [-] create an author page with all the blog posts shown `/author` (no need to make unnecessary api calls, will work on it if vercel kicks us out of their free plan)
 - [-] Pagination **using a `show more` button** (will start workin on this when the site is 10 articles published -- till that, it is delayed.)
