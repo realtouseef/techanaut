@@ -3,8 +3,8 @@ import Layout from "@/components/Layout";
 import { createClient } from "contentful";
 import safeJsonStringify from "safe-json-stringify";
 import { SiteData } from "@/utils/SiteData";
-import Head from "next/head";
 import Hero from "@/components/Hero";
+import HomePageSEO from "@/utils/HomePageSEO";
 
 // dynamic imports
 const AllBlogPosts = dynamic(() => import("@/components/AllBlogPosts"));
@@ -37,46 +37,12 @@ export async function getStaticProps() {
 }
 
 const Home = ({ blogPosts }) => {
-  const {
-    siteTitle,
-    siteMoto,
-    siteDescription,
-    siteKeywords,
-    siteUrl,
-    siteImage,
-  } = SiteData;
+  const { siteTitle } = SiteData;
 
   return (
     <>
       <Layout>
-        <Head>
-          <meta charSet="utf-8" />
-          <title>{siteTitle + " | " + siteMoto}</title>
-          <link rel="canonical" href={siteUrl} />
-          <meta
-            property="viewport"
-            content="width=device-width, initial-scale=1"
-          />
-          <meta
-            name="robots"
-            content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
-          />
-          <meta property="og:title" content={siteTitle} />
-          <meta property="og:site_name" content={siteTitle} />
-          <meta property="og:url" content={siteUrl} />
-          <meta property="og:description" content={siteDescription} />
-          <meta property="description" content={siteDescription} />
-          <meta property="og:locale" content="en_US" />
-          <meta property="og:type" content="website" />
-          <meta property="image" content={siteImage} />
-          <meta property="og:image" content={siteImage} />
-          <meta property="og:image:width" content="400" />
-          <meta property="og:image:height" content="200" />
-          <meta property="og:image:type" content="image/png" />
-          <meta property="keywords" content={siteKeywords} />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:site" content={`@${siteTitle}`} />
-        </Head>
+        <HomePageSEO />
         <Hero
           heroTitle={`the ${siteTitle} Blog`}
           heroDescription="Expand your knowledge of the tech and gaming world with detailed reviews, step-by-step guides, and informational content."

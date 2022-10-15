@@ -113,7 +113,6 @@ const renderOptions = {
 };
 
 const PerPosts = ({ article }) => {
-  console.log(article);
   // const [isBuyingGuide, setIsBuyingGuide] = useState(false);
   const { siteTitle, siteUrl, siteAffiliateDisclosure } = SiteData;
   // const buyingGuideCategory = article?.fields?.category?.fields?.categoryName;

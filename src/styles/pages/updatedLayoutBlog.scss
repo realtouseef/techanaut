@@ -18,22 +18,22 @@
     // styling for distinguishing the headings
 
     h1 {
-      @apply text-3xl lg:text-4xl my-4 text-primary_text;
+      @apply text-5xl my-4 text-primary_text;
     }
     h2 {
-      @apply text-[32px] lg:text-5xl leading-[29px] my-4 text-primary_text;
+      @apply text-4xl leading-[29px] my-4 text-primary_text;
     }
     h3 {
-      @apply text-primary_text text-[28px] lg:text-[38px] leading-[42px] my-4;
+      @apply text-primary_text text-3xl leading-tight my-4;
     }
     h4 {
-      @apply text-primary_text text-[22px] lg:text-[26px] my-4;
+      @apply text-primary_text text-2xl lg:text-[26px] my-4;
     }
     h5 {
-      @apply text-primary_text text-lg my-4;
+      @apply text-primary_text text-xl my-4;
     }
     h6 {
-      @apply flex flex-col space-y-5 w-max py-3 mt-5 mb-10 text-sm sm:text-lg;
+      @apply flex flex-col space-y-5 w-max py-3 mt-5 mb-10 text-lg;
 
       a {
         @apply px-4 py-3 bg-btn_bg hover:bg-btn_bg_hover hover:text-btn_text_hover text-btn_text font-bold sm:tracking-wide no-underline;
