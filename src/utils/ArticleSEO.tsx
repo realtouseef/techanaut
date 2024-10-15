@@ -1,6 +1,22 @@
 import Head from "next/head";
 import { SiteData } from "./SiteData";
 
+interface SeoProps {
+  articleTitle: string;
+  slug: string;
+  siteName: string;
+  excerpt: string;
+  description?: string;
+  image: string;
+  imageWidth: string;
+  imageHeight: string;
+  imageType: string;
+  keywords: string[];
+  createdAt: string;
+  updatedAt: string;
+  author: string;
+}
+
 const ArticleSEO = ({
   articleTitle,
   slug,
@@ -15,8 +31,9 @@ const ArticleSEO = ({
   createdAt,
   updatedAt,
   author = "Techanaut",
-}) => {
+}: SeoProps) => {
   const { siteTitle, siteUrl } = SiteData;
+
   return (
     <Head>
       {/* General Meta Tags */}

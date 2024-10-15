@@ -1,9 +1,10 @@
 import dynamic from "next/dynamic";
 import Navbar from "./Navbar";
+import React from "react";
 
 const Footer = dynamic(() => import("./Footer"));
 
-const ArticleLayout = ({ children }) => {
+const ArticleLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <main className="article_layout">
       <Navbar />

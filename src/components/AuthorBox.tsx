@@ -1,12 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 
+interface AutherBoxProps {
+  authorImage: string;
+  authorName: string;
+  authorDescription: string;
+  authorLink?: string;
+}
+
 const AuthorBox = ({
   authorImage,
   authorName,
   authorDescription,
-  authorLink,
-}) => {
+}: AutherBoxProps) => {
   return (
     <>
       <div className="author_box">
@@ -21,12 +27,6 @@ const AuthorBox = ({
               objectFit="cover"
             />
           </div>
-          {/* <Link href={authorLink}>
-            <a className="author_box_text_wrapper">
-              <h1 className="author_box_name">{authorName}</h1>
-              <p className="author_box_description">{authorDescription}</p>
-            </a>
-          </Link> */}
           <div>
             <div className="author_box_text_wrapper">
               <h1 className="author_box_name">{authorName}</h1>

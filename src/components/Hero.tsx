@@ -1,4 +1,10 @@
-const Hero = ({ heroTitle, heroDescription, articleHeroCategory }) => {
+interface Props {
+  heroTitle: string;
+  heroDescription?: string;
+  articleHeroCategory?: string;
+}
+
+const Hero = ({ heroTitle, heroDescription, articleHeroCategory }: Props) => {
   return (
     <>
       <div className="hero">

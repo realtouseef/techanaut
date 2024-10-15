@@ -2,9 +2,15 @@ import Link from "next/link";
 import { SiteData } from "@/utils/SiteData";
 import dynamic from "next/dynamic";
 
-const Techanaut = dynamic(() => import("public/images/techanaut.svg"));
+const Techanaut = dynamic(() => import("/public/images/techanaut.svg"));
 
-const footerItems = [
+interface footerProps {
+  id: number;
+  itemName: string;
+  itemLink: string;
+}
+
+const footerItems: footerProps[] = [
   { id: 1, itemName: "About", itemLink: "/about" },
   {
     id: 2,

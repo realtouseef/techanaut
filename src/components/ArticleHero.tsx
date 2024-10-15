@@ -1,13 +1,21 @@
 import dayjs from "dayjs";
 import Image from "next/image";
 
+interface ArticleHeroProps {
+  articleTitle: string;
+  articleCategory: string;
+  articlefeaturedImage: string;
+  articleAuthor: string;
+  articleDate: string;
+}
+
 const ArticleHero = ({
   articleTitle,
   articleCategory,
   articlefeaturedImage,
   articleAuthor,
   articleDate,
-}) => {
+}: ArticleHeroProps) => {
   return (
     <>
       <div className="article_hero">

@@ -43,7 +43,6 @@ const PageSlug = ({ pages }) => {
     <Layout>
       <ArticleSEO
         articleTitle={pages.fields?.title}
-        title={pages.fields?.title}
         slug={pages.fields?.slug}
         keywords={pages.fields?.metadata?.tags}
       />

@@ -6,7 +6,6 @@ import { SiteData } from "@/utils/SiteData";
 import Hero from "@/components/Hero";
 import HomePageSEO from "@/utils/HomePageSEO";
 
-// dynamic imports
 const AllBlogPosts = dynamic(() => import("@/components/AllBlogPosts"));
 
 export async function getStaticProps() {
@@ -20,8 +19,6 @@ export async function getStaticProps() {
 
   return {
     props: {
-      // only return what you're using
-      // helps in decreasing the size
       blogPosts: data.map(
         ({
           fields: { title, author, featuredImage, slug, excerpt, category },

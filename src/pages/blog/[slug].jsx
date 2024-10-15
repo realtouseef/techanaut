@@ -1,4 +1,3 @@
-// import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { createClient } from "contentful";
@@ -13,7 +12,6 @@ import AuthorBox from "@/components/AuthorBox";
 
 // dynamic imports
 const ArticleLayout = dynamic(() => import("@/components/ArticleLayout"));
-// const SocialShare = dynamic(() => import("@/utils/SocialShare"));
 
 const client = createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -61,7 +59,6 @@ const renderOptions = {
       );
     },
     [INLINES.EMBEDDED_ENTRY]: (node) => {
-      // target the contentType of the EMBEDDED_ENTRY to display as you need
       if (node.data.target.sys.contentType.sys.id === "blog") {
         return (
           <a
@@ -76,7 +73,6 @@ const renderOptions = {
       }
     },
     [BLOCKS.EMBEDDED_ENTRY]: (node) => {
-      // target the contentType of the EMBEDDED_ENTRY to display as you need
       if (node.data.target.sys.contentType.sys.id === "videoEmbed") {
         return (
           <div className="video_wrapper">
@@ -95,7 +91,6 @@ const renderOptions = {
     },
 
     [BLOCKS.EMBEDDED_ASSET]: (node) => {
-      // render the EMBEDDED_ASSET as you need
       let imgWidth = node.data.target.fields.file.details.image.width;
       let imgHeight = node.data.target.fields.file.details.image.height;
       return (
@@ -113,17 +108,7 @@ const renderOptions = {
 };
 
 const PerPosts = ({ article }) => {
-  // const [isBuyingGuide, setIsBuyingGuide] = useState(false);
-  const { siteTitle, siteUrl, siteAffiliateDisclosure } = SiteData;
-  // const buyingGuideCategory = article?.fields?.category?.fields?.categoryName;
-
-  // useEffect(() => {
-  //   (() => {
-  //     if (Object.values(buyingGuideCategory).join("") === "Buying Guide") {
-  //       setIsBuyingGuide(true);
-  //     }
-  //   })();
-  // }, [buyingGuideCategory]);
+  const { siteTitle } = SiteData;
 
   return (
     <ArticleLayout>
@@ -169,13 +154,6 @@ const PerPosts = ({ article }) => {
                 renderOptions
               )}
             </div>
-
-            {/* <div className="social_wrapper">
-              <SocialShare
-                shareUrl={`${siteUrl}/blog/${article.fields?.slug}`}
-                mediaUrl={`https:${article.fields?.featuredImage?.fields?.file?.url}`}
-              />
-            </div> */}
           </div>
           <AuthorBox
             authorLink={`/author/${article.fields?.author[0]?.fields?.slug}`}
@@ -186,7 +164,6 @@ const PerPosts = ({ article }) => {
             authorDescription={article.fields?.author[0]?.fields?.bio}
           />
         </div>
-        {/* {isBuyingGuide && <p className="sbp_amz">{siteAffiliateDisclosure}</p>} */}
       </article>
 
       <TwoArticlesUnderArticle />

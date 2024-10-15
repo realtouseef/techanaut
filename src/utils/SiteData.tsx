@@ -1,4 +1,6 @@
-export const SiteData = {
+import { SiteDataProps } from "./types";
+
+export const SiteData: SiteDataProps = {
   siteTitle: "Techanaut",
   siteDescription: "The main hub of unbiased reviews about Gaming products",
   siteMoto: "Unbiased Reviews about Gaming",
